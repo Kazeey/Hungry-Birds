@@ -14,15 +14,16 @@ const accountImport      = require('./functions/account/index.js');
 const notificationImport = require('./functions/notifications/index.js');
 
 // ------ Login ------ 
-app.post('/api/login' , loginImport.data.login);  // login to an existing account
+app.post('/api/login'           , loginImport.data.login);           // login to an existing account
+app.post('/api/forgotPassword'  , loginImport.data.forgotPassword);  // Send email to reset password
 
 // ------ Account ------
-app.get('/api/account/create'  , accountImport.data.create);    // If you want to create an account
+app.post('/api/account/create' , accountImport.data.create);    // If you want to create an account
 app.post('/api/account/update' , accountImport.data.update);    // If you want to update informations
 app.post('/api/account/delete' , accountImport.data.delete);    // If you want to delete an account
 
 // ------ Notifications ------
-app.post('/api/notification/submit' , notificationImport.data.submit); // Send notifications to user
+app.post('/api/notifications/submit' , notificationImport.data.submit); // Send notifications to user
 
 app.listen(3001, function() {
     console.log("connected");
