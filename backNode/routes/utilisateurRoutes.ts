@@ -8,8 +8,8 @@ export const setUtilisateurRouting = (app) => {
     const endpoint = 'utilisateurs'
 
     app.get(`/${endpoint}`, utilisateurController.findAll);
-    // app.get(`/${endpoint}/:id`, userController.findById);
-    // app.post(`/${endpoint}`, jsonParser, userController.create);
-    // app.patch(`/${endpoint}/:id`, jsonParser, userController.update);
-    // app.delete(`/${endpoint}/:id`, userController.delete);
+    app.get(`/${endpoint}/:id`, utilisateurController.findById);
+    app.post(`/${endpoint}`, jsonParser, utilisateurController.create);
+    app.patch(`/${endpoint}/:id`, jsonParser, utilisateurController.update);
+    app.delete(`/${endpoint}/:id`, utilisateurController.delete);
 }
