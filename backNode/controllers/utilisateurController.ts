@@ -1,9 +1,9 @@
-import mysql from "mysql";
+import { connexionSQL } from '../config/mysql.config';
 
 class UtilisateurController {
 
     findAll = () => {
-        mysql.query("SELECT * FROM utilisateur", (err, res) => {
+        connexionSQL.query("SELECT * FROM utilisateur", (err, res) => {
             if (err) {
                 console.log("Error: ", err);
             } else {
