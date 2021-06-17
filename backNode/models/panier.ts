@@ -1,5 +1,4 @@
-class panier 
-{
+export class panier {
     public id_panier : number;
     public id_structure : number;
     public description : String;
@@ -18,21 +17,4 @@ class panier
         this.prix = prix;
         this.quantite = quantite;
     }
-
-    public create(): Boolean
-    {
-        return;
-    }
-
-    public update(): Boolean
-    {
-        return;
-    }
-
-    public delete(): Boolean
-    {
-        return;
-    }
 }
-
-export = panier;

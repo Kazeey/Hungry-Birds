@@ -1,5 +1,4 @@
-class Account 
-{
+export class Account {
     public nom : String;
     public prenom : String;
     public mail : String;
@@ -22,21 +21,4 @@ class Account
         this.ville = ville;
         this.role = role;
     }
-
-    public create(): Boolean
-    {
-        return;
-    }
-
-    public update(): Boolean
-    {
-        return;
-    }
-
-    public delete(): Boolean
-    {
-        return;
-    }
 }
-
-export = Account;

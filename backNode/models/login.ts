@@ -1,5 +1,4 @@
-export class Login 
-{
+export class Login {
     public login    : String;
     public password : String;
 
@@ -7,16 +6,5 @@ export class Login
     {
         this.login = login;
         this.password = password;
-    }
-
-    // public connect(): boolean
-    // {
-    //     console.log(connexionSQL);
-    //     return true;
-    // }
-
-    public forgotPassword(): String
-    {
-        return;
     }
 }

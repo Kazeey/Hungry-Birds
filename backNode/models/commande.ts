@@ -1,5 +1,4 @@
-class commande 
-{
+export class commande {
     public id_commande : number;
     public id_utilisateur : number;
     public id_panier : number;
@@ -19,21 +18,4 @@ class commande
         this.prix = prix;
 
     }
-
-    public create(): Boolean
-    {
-        return;
-    }
-
-    public update(): Boolean
-    {
-        return;
-    }
-
-    public delete(): Boolean
-    {
-        return;
-    }
 }
-
-export = commande;
