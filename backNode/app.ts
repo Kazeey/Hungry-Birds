@@ -1,11 +1,17 @@
-import Login = require('./models/login/index')
+import express from 'express';
+import { connexionSQL } from './config/mysql.config';
 
-const express = require('express');
 const app = express();
 const port = 3001;
 
+connexionSQL.connect();
+
 app.listen(port, () => {
     console.log(`Connected | Port : ${port}`)
-    let test = new Login("Jean", "Pierre");
-    test.connect();
 })
+
+// connexionSQL.query('SELECT * from utilisateur', function(err, rows, fields) {
+//     if (err) throw err;
+//     console.log(rows);
+// });
+

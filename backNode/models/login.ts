@@ -1,6 +1,4 @@
-import connexionSQL from '../../config/con_mysql'
-
-class Login 
+export class Login 
 {
     public login    : String;
     public password : String;
@@ -11,16 +9,14 @@ class Login
         this.password = password;
     }
 
-    public connect(): boolean
-    {
-        console.log(connexionSQL);
-        return true;
-    }
+    // public connect(): boolean
+    // {
+    //     console.log(connexionSQL);
+    //     return true;
+    // }
 
     public forgotPassword(): String
     {
         return;
     }
 }
-
-export = Login;
