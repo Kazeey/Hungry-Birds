@@ -6,7 +6,13 @@ const app = express();
 const port = 3001;
 
 //Connexion BDD MySQL
-connexionSQL.connect();
+connexionSQL.connect(error => {
+    if(error) {
+        throw error;
+    } else {
+        console.log("Connecté à la base de données Hungry Birds");
+    }
+});
 
 //Lancement serveur
 app.listen(port, () => {
