@@ -1,6 +1,4 @@
-import Login from './models/login/index';
-import Account from './models/account/index';
-import Notification from './models/Notifications/index';
+import Login = require('./models/login/index')
 
 const express = require('express');
 const app = express();
