@@ -5,7 +5,7 @@ import { setstructureRouting } from './routes/structureRoutes';
 import { setpanierRouting } from './routes/panierRoutes';
 import { setfavoriRouting } from './routes/favoriRoutes';
 import { setcommandeRouting } from './routes/commandeRoutes';
-
+import { setLoginRouting } from './routes/loginRoutes';
 
 const app = express();
 const port = 3001;
@@ -26,6 +26,7 @@ app.listen(port, () => {
 
 //Définition des routes
 setUtilisateurRouting(app);
+setLoginRouting(app);
 setstructureRouting(app);
 setpanierRouting(app);
 setfavoriRouting(app);

@@ -1,10 +1,10 @@
 export class Login {
-    public login    : String;
+    public mail    : String;
     public password : String;
 
-    constructor(login: String, password: String)
+    constructor(mail: String, password: String)
     {
-        this.login = login;
+        this.mail = mail;
         this.password = password;
     }
 }

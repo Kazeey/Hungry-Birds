@@ -32,7 +32,7 @@ class CommandeController {
                 console.log("Error: ", error);
             } else {
                 res.status(201)
-                .send("commande créé avec succès.")
+                .send("commande créée avec succès.")
                 .end();
             }
         });

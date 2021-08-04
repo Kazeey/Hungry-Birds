@@ -3,7 +3,7 @@ INSERT INTO `hungrybirds`.`utilisateur` (`nom`, `prenom`, `mail`, `password`, `t
 VALUES ("Pezé", "Quentin", "quentinpeze@hotmail.fr", "test", 0681435382, "15 Allée Jean Pierre Vasseur", "Boulogne sur mer", 62000, 2, 1); 
 
 INSERT INTO `hungrybirds`.`utilisateur` (`nom`, `prenom`, `mail`, `password`, `telephone`, `adresse`, `ville`, `code_postal`, `role`, `statut`)
-VALUES ("Taverne", "Félicien", "felicien.taverne@projet.com", "nemesis", 0612151845, "439 rue du Canet", "Marquise", 62230, 0, 1); 
+VALUES ("Blampain", "Maxime", "maxime.blampain@projet.com", "camille", 0612151845, "74 rue du petit train", "Wimille", 62126, 0, 1); 
 
 INSERT INTO `hungrybirds`.`utilisateur` (`nom`, `prenom`, `mail`, `password`, `telephone`, `adresse`, `ville`, `code_postal`, `role`, `statut`)
 VALUES ("Poulain", "Pierre", "pierre.poulain@projet.com", "anakin", 0636353478, "94 rue Nationale", "Boulogne sur mer", 62200, 2, 1); 
