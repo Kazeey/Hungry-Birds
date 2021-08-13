@@ -4,9 +4,12 @@ class PanierController {
 
     findAll = (req, res, next) => {
         connexionSQL.query(`SELECT * FROM panier`, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(200)
                 .send(sqlResponse)
                 .end();
@@ -16,9 +19,12 @@ class PanierController {
 
     findById = (req, res, next) => {
         connexionSQL.query(`SELECT * FROM panier WHERE id_panier = ${req.params.id}`, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(200)
                 .send(sqlResponse)
                 .end();
@@ -28,9 +34,12 @@ class PanierController {
 
     create = (req, res, next) => {
         connexionSQL.query(`INSERT INTO panier SET ?`, req.body, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(201)
                 .send("panier créé avec succès.")
                 .end();
@@ -40,9 +49,12 @@ class PanierController {
 
     update = (req, res, next) => {
         connexionSQL.query(`DELETE FROM panier WHERE id_panier = ${req.params.id}`, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(201)
                 .send(`L'panier avec l'id ${req.params.id} a été supprimé.`)
                 .end();
@@ -52,9 +64,12 @@ class PanierController {
 
     delete = (req, res, next) => {
         connexionSQL.query(``, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(201)
                 .send(`L'panier avec l'id ${req.params.id} a été supprimé.`)
                 .end();

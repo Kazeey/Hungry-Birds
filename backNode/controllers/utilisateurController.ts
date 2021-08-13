@@ -4,9 +4,12 @@ class UtilisateurController {
 
     findAll = (req, res, next) => {
         connexionSQL.query(`SELECT * FROM utilisateur`, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(200)
                 .send(sqlResponse)
                 .end();
@@ -16,9 +19,12 @@ class UtilisateurController {
 
     findById = (req, res, next) => {
         connexionSQL.query(`SELECT * FROM utilisateur WHERE id_utilisateur = ${req.params.id}`, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(200)
                 .send(sqlResponse)
                 .end();
@@ -28,9 +34,12 @@ class UtilisateurController {
 
     create = (req, res, next) => {
         connexionSQL.query(`INSERT INTO utilisateur SET ?`, req.body, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(201)
                 .send("Utilisateur créé avec succès.")
                 .end();
@@ -40,9 +49,12 @@ class UtilisateurController {
 
     update = (req, res, next) => {
         connexionSQL.query(`DELETE FROM utilisateur WHERE id_utilisateur = ${req.params.id}`, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(201)
                 .send(`L'utilisateur avec l'id ${req.params.id} a été supprimé.`)
                 .end();
@@ -52,9 +64,12 @@ class UtilisateurController {
 
     delete = (req, res, next) => {
         connexionSQL.query(``, (error, sqlResponse) => {
-            if (error) {
+            if (error) 
+            {
                 console.log("Error: ", error);
-            } else {
+            } 
+            else 
+            {
                 res.status(201)
                 .send(`L'utilisateur avec l'id ${req.params.id} a été supprimé.`)
                 .end();

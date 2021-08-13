@@ -12,11 +12,11 @@ const port = 3001;
 
 //Connexion BDD MySQL
 connexionSQL.connect(error => {
-    if(error) {
+    if(error) 
         throw error;
-    } else {
+    else 
         console.log("Connecté à la base de données Hungry Birds");
-    }
+
 });
 
 //Lancement serveur
