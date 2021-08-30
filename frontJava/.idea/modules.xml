@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontJava.iml" filepath="$PROJECT_DIR$/.idea/modules/frontJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HungryBirds.iml" filepath="$PROJECT_DIR$/.idea/modules/HungryBirds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HungryBirds.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HungryBirds.app.iml" />
     </modules>
   </component>
 </project>
