@@ -1,0 +1,2 @@
+com/example/hungrybirds/BuildConfig.java
+ com.example.hungrybirds.BuildConfig
