@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Quentin Cardon\\Documents\\GitHub\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "B:\\Projets\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Quentin Cardon\\.gradle\\caches\\transforms-2\\files-2.1\\3ba07ceee36dd6c7e34fd55077e778cc\\appcompat-1.3.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Quentin\\.gradle\\caches\\transforms-2\\files-2.1\\3ba07ceee36dd6c7e34fd55077e778cc\\appcompat-1.3.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Quentin Cardon\\.gradle\\caches\\transforms-2\\files-2.1\\018857785a8612d8a3304d91e5bbecd1\\core-1.6.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Quentin\\.gradle\\caches\\transforms-2\\files-2.1\\018857785a8612d8a3304d91e5bbecd1\\core-1.6.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
