@@ -1853,6 +1853,8 @@ id clip_vertical
 id clockwise
 id collapseActionView
 id confirm_button
+id connexionButton
+id connexionMessage
 id contact_form_title
 id container
 id content
@@ -1893,6 +1895,8 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id editConnectionMailAddress
+id editConnectionPassword
 id edit_query
 id elastic
 id end
@@ -2009,6 +2013,7 @@ id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_header_container
 id never
+id noRegisterButton
 id noScroll
 id none
 id normal
@@ -2039,6 +2044,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id registerButton
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2360,13 +2366,17 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string connexion
+string connexionPage
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string inscription
 string item_view_role_description
+string mailPlaceholder
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -2422,6 +2432,8 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string noConnexion
+string passwordPlaceholder
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

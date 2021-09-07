@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "B:\\Projets\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+            "outputFile": "C:\\Website\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Quentin\\.gradle\\caches\\transforms-2\\files-2.1\\991eaf2b6472a37f0a174897411ac727\\material-1.4.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "source": "C:\\Users\\quentin\\.gradle\\caches\\transforms-2\\files-2.1\\991eaf2b6472a37f0a174897411ac727\\material-1.4.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
