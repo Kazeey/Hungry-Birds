@@ -1,4 +1,4 @@
-#Tue Aug 31 10:45:45 CEST 2021
+#Wed Sep 08 22:49:14 CEST 2021
 base.2=B\:\\Projets\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
 path.2=8/classes.dex
 base.1=B\:\\Projets\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

@@ -1,4 +1,4 @@
-com/example/hungrybirds/BuildConfig.java
- com.example.hungrybirds.BuildConfig
 com/example/hungrybirds/MainActivity.java
  com.example.hungrybirds.MainActivity
+com/example/hungrybirds/BuildConfig.java
+ com.example.hungrybirds.BuildConfig

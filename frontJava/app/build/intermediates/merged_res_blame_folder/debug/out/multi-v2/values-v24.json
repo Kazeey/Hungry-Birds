@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Website\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "B:\\Projets\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\quentin\\.gradle\\caches\\transforms-2\\files-2.1\\3ba07ceee36dd6c7e34fd55077e778cc\\appcompat-1.3.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Quentin\\.gradle\\caches\\transforms-2\\files-2.1\\3ba07ceee36dd6c7e34fd55077e778cc\\appcompat-1.3.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

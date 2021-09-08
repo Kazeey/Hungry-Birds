@@ -14,12 +14,11 @@
         android:ems="10"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:text="@string/passwordPlaceholder"
         app:layout_constraintBottom_toTopOf="@+id/connexionButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="@string/passwordPlaceholder" />
 
     <Button
         android:id="@+id/connexionButton"
@@ -41,12 +40,11 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        android:text="@string/mailPlaceholder"
         app:layout_constraintBottom_toTopOf="@+id/editConnectionPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="@string/inscription" />
 
     <TextView
         android:id="@+id/connexionMessage"
