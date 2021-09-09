@@ -1,4 +1,7 @@
 com/example/hungrybirds/MainActivity.java
  com.example.hungrybirds.MainActivity
+ com.example.hungrybirds.MainActivity$1
+com/example/hungrybirds/GestionUser.java
+ com.example.hungrybirds.GestionUser
 com/example/hungrybirds/BuildConfig.java
  com.example.hungrybirds.BuildConfig

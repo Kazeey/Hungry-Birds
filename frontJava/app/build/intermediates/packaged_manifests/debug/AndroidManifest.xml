@@ -17,8 +17,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.HungryBirds" >
+        <activity
+            android:name="com.example.hungrybirds.GestionUser"
+            android:exported="true" />
         <activity android:name="com.example.hungrybirds.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
