@@ -4,7 +4,7 @@ import { transporter } from '../config/mail.config';
 const nodemailer = require('nodemailer');
 class LoginController {
 
-    findUser = (req, res, next) => {
+    login = (req, res, next) => {
         connexionSQL.query(`SELECT * FROM utilisateur WHERE mail = '${req.body.mail}' AND password = '${req.body.password}'`, (error, sqlResponse) => {
             if (error)
                 console.log("Error: ", error);
