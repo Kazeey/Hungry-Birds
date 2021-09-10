@@ -2,5 +2,7 @@ com/projet/hungrybirds/BuildConfig.java
  com.projet.hungrybirds.BuildConfig
 com/projet/hungrybirds/GestionUserActivity.java
  com.projet.hungrybirds.GestionUserActivity
+com/projet/hungrybirds/utils/Functions.java
+ com.projet.hungrybirds.utils.Functions
 com/projet/hungrybirds/MainActivity.java
  com.projet.hungrybirds.MainActivity
