@@ -7,10 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.projet.hungrybirds.utils.Functions;
-import com.projet.hungrybirds.actions.LoginAction;
 
 import org.json.JSONException;
 
@@ -20,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     // Récupération des classes
     Functions cFunctionsClass = new Functions();
-    LoginAction cLoginActionClass = new LoginAction();
 
     // Instanciation des variables
     EditText mEditMail, mEditPassword;
@@ -53,19 +50,7 @@ public class MainActivity extends AppCompatActivity {
             // Si le format du mail correspond au format normal d'une adresse, alors on check dans le back si l'utilisateur existe
             if(bMailConfirm)
             {
-                try
-                {
-                    cLoginActionClass.getUserFromLogin(zMail, zPasword);
-                }
-                catch (IOException e)
-                {
-                    e.printStackTrace();
-                }
-                catch (JSONException e)
-                {
-                    e.printStackTrace();
-                }
-
+                // Appel de la requête
                 // Si l'utilisateur existe, alors il se connecte, sinon un message d'erreur s'affichera
             }
         }
