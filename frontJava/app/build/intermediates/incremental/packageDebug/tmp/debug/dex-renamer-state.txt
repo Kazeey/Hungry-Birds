@@ -1,8 +1,10 @@
-#Fri Sep 10 11:14:38 CEST 2021
+#Fri Sep 10 14:10:42 CEST 2021
+path.4=9/classes.dex
 path.3=13/classes.dex
 path.2=7/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
+base.4=C\:\\Website\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 base.3=C\:\\Website\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
 base.2=C\:\\Website\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 base.1=C\:\\Website\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
@@ -11,3 +13,4 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+renamed.4=classes5.dex
