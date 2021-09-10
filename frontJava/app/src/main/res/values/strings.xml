@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">HungryBirds</string>
-    <string name="connexionPage">Page de connexion</string>
-    <string name="connexion">Se connecter</string>
-    <string name="inscription">S\'inscrire</string>
-    <string name="noConnexion">Continuer sans se connecter</string>
-    <string name="mailPlaceholder">Adresse Mail</string>
-    <string name="passwordPlaceholder">Mot de passe</string>
+    <string name="connexionPageMessage">Page de connexion</string>
+    <string name="placeholderMail">Adresse mail</string>
+    <string name="placeholderPassword">Mot de passe</string>
+    <string name="buttonConnexion">Se connecter</string>
+    <string name="buttonRegister">S\'inscrire</string>
+    <string name="buttonNoRegister">Continuer sans se connecter</string>
 </resources>
