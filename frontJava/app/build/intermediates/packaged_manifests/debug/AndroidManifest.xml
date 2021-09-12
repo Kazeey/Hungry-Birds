@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.HungryBirds" >
+        <activity android:name="com.example.hungrybirds.NotConnectedActivity" />
         <activity android:name="com.example.hungrybirds.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

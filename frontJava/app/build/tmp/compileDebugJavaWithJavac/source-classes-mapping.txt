@@ -1,2 +1,12 @@
+com/example/hungrybirds/ContactFormActivity.java
+ com.example.hungrybirds.ContactFormActivity
+com/example/hungrybirds/NotConnectedActivity.java
+ com.example.hungrybirds.NotConnectedActivity
+com/example/hungrybirds/MainActivity.java
+ com.example.hungrybirds.MainActivity
+ com.example.hungrybirds.MainActivity$1
+com/example/hungrybirds/SplashActivity.java
+ com.example.hungrybirds.SplashActivity
+ com.example.hungrybirds.SplashActivity$1
 com/example/hungrybirds/BuildConfig.java
  com.example.hungrybirds.BuildConfig
