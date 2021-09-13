@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             if(bMailConfirm)
             {
                 // Appel de la requête
-                cLoginAction.callApi(view, mContext);
+
                 // Si l'utilisateur existe, alors il se connecte, sinon un message d'erreur s'affichera
             }
         }

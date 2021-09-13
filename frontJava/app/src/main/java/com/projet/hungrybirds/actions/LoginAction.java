@@ -17,7 +17,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class LoginAction extends AppCompatActivity {
-    public void callApi(View view, Context context)
+
+    /**
+     * This function is an exemple of a GET method.
+     *
+     * @param context   Contect from the targeted Activity
+     * @return          Return the response as JSONObject
+     */
+    public void getExempleFromApi(Context context)
     {
         RequestQueue queue = Volley.newRequestQueue(context);
         String url = "http://10.0.2.2:3001/favoris/";
@@ -27,16 +34,16 @@ public class LoginAction extends AppCompatActivity {
             public void onResponse(String response) {
                 try {
                     JSONArray jsonArray = new JSONArray(response);
-                    System.out.println(jsonArray);
-
+                    JSONObject obj;
                     for(int i = 0; i < jsonArray.length(); i++)
                     {
-                        JSONObject obj = jsonArray.getJSONObject(i);
+                        obj = jsonArray.getJSONObject(i);
                         String id_utilisateur = obj.getString("id_utilisateur");
                         String id_favori = obj.getString("id_favori");
-                        System.out.println("id_favori : " + id_favori + " | id_utilisateur : " + id_utilisateur);
                     }
-                } catch (JSONException e) {
+                }
+                catch (JSONException e)
+                {
                     e.printStackTrace();
                 }
             }
