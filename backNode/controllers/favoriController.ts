@@ -3,6 +3,7 @@ import { connexionSQL } from '../config/mysql.config';
 class FavoriController {
 
     findAll = (req, res, next) => {
+        console.log("test");
         connexionSQL.query(`SELECT * FROM favoris`, (error, sqlResponse) => {
             if (error) 
                 console.log("Error: ", error);
@@ -13,7 +14,7 @@ class FavoriController {
                 if(sqlResponse[0] == null)
                     doc[0] = "Il n'y a aucun favoris.";
                 else
-                    doc[0] = sqlResponse[0];
+                    doc[0] = sqlResponse;
 
                 res.status(200)
                 .send(doc[0])

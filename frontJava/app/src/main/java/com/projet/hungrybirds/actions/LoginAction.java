@@ -1,47 +1,36 @@
 package com.projet.hungrybirds.actions;
 
-import android.os.AsyncTask;
+import android.content.Context;
+import android.view.View;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
+import androidx.appcompat.app.AppCompatActivity;
 
-import javax.net.ssl.HttpsURLConnection;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
-class LoginAction extends AsyncTask<String, Void, Boolean> {
-
-    @Override
-    protected void onPreExecute()
+public class LoginAction extends AppCompatActivity {
+    public void callApi(View view, Context context)
     {
-        super.onPreExecute();
+        RequestQueue queue = Volley.newRequestQueue(context);
+        String url = "http://10.0.2.2:3001/favoris/";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                System.out.println("Response is: "+ response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error)
+            {
+                System.out.println("Error :" + error);
+            }
+        });
+
+        queue.add(stringRequest);
     }
-
-    @Override
-    protected Boolean doInBackground(String... url)
-    {
-        try
-        {
-            URL urlLogin = new URL("127.0.0.1/login/connect");
-
-            HttpsURLConnection urlConnection = (HttpsURLConnection) urlLogin.openConnection();
-            InputStream is = urlConnection.getInputStream();
-
-            return true;
-        }
-        catch (MalformedURLException e)
-        {
-            e.printStackTrace();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-
-        return false;
-    }
-
 }

@@ -1,12 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-30:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\quentin\.gradle\caches\transforms-3\25012fcc08d4c5cf5a2844c1a21a6fbe\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\quentin\.gradle\caches\transforms-3\603d5b366cec0e2b4f7a40320b7dc059\transformed\constraintlayout-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\quentin\.gradle\caches\transforms-3\4ecd700c773cf5624732e3577602f1ea\transformed\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\quentin\.gradle\caches\transforms-3\83b085bf5ac15b844df7a4b3f10d7d50\transformed\jetified-volley-1.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\quentin\.gradle\caches\transforms-3\d8e35720d387af23b8661e2c3d29cdaa\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\quentin\.gradle\caches\transforms-3\ee0550e8848c5279ef1306690d07508f\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\quentin\.gradle\caches\transforms-3\a2fec87436ed4b48e2cd27f2bec00bd8\transformed\jetified-activity-1.2.4\AndroidManifest.xml:17:1-24:12
@@ -39,22 +40,22 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\quentin\.gradle\
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\quentin\.gradle\caches\transforms-3\8ca7186ef83368b8549809152ed428ce\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\quentin\.gradle\caches\transforms-3\485578c608519582fc751ff2f7c88476\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\quentin\.gradle\caches\transforms-3\18e5cb54f886f7aa7e26ad4e22b3ac23\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:4:5-37
 		INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
-		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
-		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:11-69
@@ -65,7 +66,7 @@ ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:6:
 	android:name
 		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:7:5-26:19
+ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:7:5-28:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\quentin\.gradle\caches\transforms-3\25012fcc08d4c5cf5a2844c1a21a6fbe\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\quentin\.gradle\caches\transforms-3\25012fcc08d4c5cf5a2844c1a21a6fbe\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\quentin\.gradle\caches\transforms-3\603d5b366cec0e2b4f7a40320b7dc059\transformed\constraintlayout-2.1.0\AndroidManifest.xml:9:5-20
@@ -82,34 +83,38 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\qu
 		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
 		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:11:9-54
+	tools:targetApi
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:15:9-28
 	android:icon
 		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
 		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:9-49
+	android:usesCleartextTraffic
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:14:9-44
 activity#com.projet.hungrybirds.GestionUserActivity
-ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:14:9-16:39
+ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:16:9-18:39
 	android:exported
-		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:16:13-36
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:13-36
 	android:name
-		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:15:13-48
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:17:13-48
 activity#com.projet.hungrybirds.MainActivity
-ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:17:9-25:20
+ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:19:9-27:20
 	android:exported
-		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:19:13-36
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:21:13-36
 	android:name
-		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:13-41
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:20:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:20:13-24:29
+ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:25:27-74
 uses-sdk
 INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
@@ -120,6 +125,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\quentin\
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\quentin\.gradle\caches\transforms-3\603d5b366cec0e2b4f7a40320b7dc059\transformed\constraintlayout-2.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\quentin\.gradle\caches\transforms-3\4ecd700c773cf5624732e3577602f1ea\transformed\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\quentin\.gradle\caches\transforms-3\4ecd700c773cf5624732e3577602f1ea\transformed\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\quentin\.gradle\caches\transforms-3\83b085bf5ac15b844df7a4b3f10d7d50\transformed\jetified-volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\quentin\.gradle\caches\transforms-3\83b085bf5ac15b844df7a4b3f10d7d50\transformed\jetified-volley-1.2.1\AndroidManifest.xml:5:5-43
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\quentin\.gradle\caches\transforms-3\d8e35720d387af23b8661e2c3d29cdaa\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\quentin\.gradle\caches\transforms-3\d8e35720d387af23b8661e2c3d29cdaa\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\quentin\.gradle\caches\transforms-3\ee0550e8848c5279ef1306690d07508f\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
