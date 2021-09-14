@@ -2185,6 +2185,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id setMessage
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2563,6 +2564,7 @@ string path_password_strike_through
 string placeholderMail
 string placeholderPassword
 string search_menu_title
+string setMessage
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

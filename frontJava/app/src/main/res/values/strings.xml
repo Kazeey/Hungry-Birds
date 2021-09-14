@@ -6,4 +6,5 @@
     <string name="buttonConnexion">Se connecter</string>
     <string name="buttonRegister">S\'inscrire</string>
     <string name="buttonNoRegister">Continuer sans se connecter</string>
+    <string name="setMessage"> </string>
 </resources>
