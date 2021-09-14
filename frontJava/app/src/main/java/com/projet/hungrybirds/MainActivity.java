@@ -9,8 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.projet.hungrybirds.interfaces.VolleyCallback;
 import com.projet.hungrybirds.utils.Functions;
 import com.projet.hungrybirds.actions.LoginAction;
+
+import org.json.JSONObject;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.onResume();
         setContentView(R.layout.activity_main);
 
         // Récupération du contexte
@@ -55,7 +59,12 @@ public class MainActivity extends AppCompatActivity {
             // Si le format du mail correspond au format normal d'une adresse, alors on check dans le back si l'utilisateur existe
             if(bMailConfirm)
             {
-                // Appel de la requête
+                cLoginAction.sendLogin(mContext, zMail, zPasword, new VolleyCallback() {
+                    @Override
+                    public void onSuccessResponse(JSONObject result) {
+                        System.out.println("Result : " + result);
+                    }
+                });
 
                 // Si l'utilisateur existe, alors il se connecte, sinon un message d'erreur s'affichera
             }
