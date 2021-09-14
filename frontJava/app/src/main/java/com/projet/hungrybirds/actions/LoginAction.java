@@ -58,7 +58,6 @@ public class LoginAction extends AppCompatActivity {
         };
 
         queue.add(jsonObjectRequest);
-
     }
 
     /**
@@ -98,5 +97,10 @@ public class LoginAction extends AppCompatActivity {
         });
 
         queue.add(stringRequest);
+    }
+
+    public void blockAccount(Context mContext, String zMail)
+    {
+
     }
 }

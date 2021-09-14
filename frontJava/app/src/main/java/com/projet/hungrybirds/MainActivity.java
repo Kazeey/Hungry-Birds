@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.projet.hungrybirds.interfaces.VolleyCallback;
 import com.projet.hungrybirds.utils.Functions;
 import com.projet.hungrybirds.actions.LoginAction;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -22,10 +24,14 @@ public class MainActivity extends AppCompatActivity {
     Functions cFunctionsClass = new Functions();
     LoginAction cLoginAction = new LoginAction();
 
-    // Instanciation des variables
+    // Instanciation des variables liées aux composants
     EditText mEditMail, mEditPassword;
+    Button mButtonConnexion;
+    TextView mSetMessage;
 
     private Context mContext;
+
+    public int nbEssais = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +43,14 @@ public class MainActivity extends AppCompatActivity {
         mContext = this;
 
         // Récupération des boutons
-        Button buttonConnexion = (Button)findViewById(R.id.buttonConnexion);
+        mButtonConnexion = (Button)findViewById(R.id.buttonConnexion);
+        mButtonConnexion.setOnClickListener(mCheckLogin);
 
-        buttonConnexion.setOnClickListener(mGetInputValues);
+        // Récupération du texte servant à l'affichage du message
+        mSetMessage = (TextView) findViewById(R.id.textConnexionPage);
     }
 
-    private View.OnClickListener mGetInputValues = new View.OnClickListener()
+    private View.OnClickListener mCheckLogin = new View.OnClickListener()
     {
         @Override
         public void onClick(View view) {
@@ -56,13 +64,29 @@ public class MainActivity extends AppCompatActivity {
             // Vérification du format du mail
             boolean bMailConfirm = cFunctionsClass.checkMail(zMail);
 
+
             // Si le format du mail correspond au format normal d'une adresse, alors on check dans le back si l'utilisateur existe
             if(bMailConfirm)
             {
                 cLoginAction.sendLogin(mContext, zMail, zPasword, new VolleyCallback() {
                     @Override
                     public void onSuccessResponse(JSONObject result) {
-                        System.out.println("Result : " + result);
+                        if(result.has("response"))
+                        {
+
+                        }
+
+                        if(nbEssais > 1)
+                        {
+                            nbEssais = nbEssais - 1;
+                            cFunctionsClass.setMessage(mSetMessage, "Nombre d'essais restants : ", nbEssais);
+                        }
+                        else
+                        {
+                            //cLoginAction.blockAccount(mContext, zMail);
+                            cFunctionsClass.setMessage(mSetMessage, "Votre compte est bloqué, veuillez contacter un administrateur.", 0);
+                            return;
+                        }
                     }
                 });
 
