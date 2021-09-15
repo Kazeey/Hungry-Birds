@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Date;
+
 public class Functions {
 
     public String phraseMessage = "";
@@ -57,5 +59,10 @@ public class Functions {
         }
 
         textView.setText(this.phraseMessage);
+    }
+
+    public void verification()
+    {
+        
     }
 }

@@ -2,6 +2,7 @@ package com.projet.hungrybirds;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,9 +30,16 @@ public class MainActivity extends AppCompatActivity {
     Button mButtonConnexion;
     TextView mSetMessage;
 
+    SharedPreferences sharedPreferences;
+
     private Context mContext;
 
+    public String statut;
     public int nbEssais;
+
+    // Pour les durées seulement, Si 0 = 15min | Si 1 = 24h
+    public int timeConnexion = 0;
+    public int time;
 
     /**
      * Initialisation des variables au démarrage de l'activité
@@ -126,7 +134,32 @@ public class MainActivity extends AppCompatActivity {
                         else // Sinon l'utilisateur a toujours 5 essais
                         {
                             nbEssais = 5;
-                            goToGestionUser(view);
+
+                            switch (result.getInt("role"))
+                            {
+                                case 0 :
+                                    statut = "Client";
+                                    break;
+                                case 1:
+                                    statut = "Association";
+                                    break;
+                                case 2:
+                                    statut = "Vendeur";
+                                    break;
+                            }
+
+                            switch (timeConnexion)
+                            {
+                                case 0 :
+                                    time = 900000;
+                                    break;
+                                case 1 :
+                                    time = ((900000 * 4) * 24);
+                                    break;
+                            }
+
+                            System.out.println("Statut : " + statut + " | timeConnexion : " + time);
+                            //goToGestionUser(view);
                         }
                     }
                 });

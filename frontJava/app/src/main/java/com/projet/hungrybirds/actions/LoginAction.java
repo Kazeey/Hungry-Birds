@@ -26,6 +26,13 @@ import java.util.Map;
 
 public class LoginAction extends AppCompatActivity {
 
+    /**
+     *
+     * @param context
+     * @param mail
+     * @param password
+     * @param callback
+     */
     public void sendLogin(Context context, String mail, String password, VolleyCallback callback)
     {
         RequestQueue queue = Volley.newRequestQueue(context);
@@ -63,6 +70,14 @@ public class LoginAction extends AppCompatActivity {
         queue.add(jsonObjectRequest);
     };
 
+    /**
+     *
+     * @param context
+     * @param mail
+     * @param password
+     * @param statut
+     * @param callback
+     */
     public void changeStatutAccount(Context context, String mail, String password, String statut, VolleyCallback callback)
     {
         RequestQueue queue = Volley.newRequestQueue(context);
