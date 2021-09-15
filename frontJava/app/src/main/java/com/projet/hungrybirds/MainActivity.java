@@ -14,6 +14,7 @@ import com.projet.hungrybirds.actions.LoginAction;
 import com.projet.hungrybirds.interfaces.VolleyCallback;
 import com.projet.hungrybirds.utils.Functions;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -74,21 +75,24 @@ public class MainActivity extends AppCompatActivity {
             // Vérification du format du mail
             boolean bMailConfirm = cFunctionsClass.checkMail(zMail);
 
-            // Si le format du mail ne correspond pas au format normal d'une adresse
-            if (bMailConfirm == false)
-                cFunctionsClass.setMessage(mSetMessage, "Le format de l'adressse mail est incorrect, veuillez le modifier !", 0);
+            // Si le format du mail ne correspond pas au format attendu
+            if (!bMailConfirm)
+                cFunctionsClass.setMessage(mSetMessage, "Le format de l'email n'est pas correct, veuillez le modifier !", 0);
 
-            // TODO ajouter vérif champ password
+            // Si l'un des deux champs est vide
+            if (zPassword.isEmpty())
+                cFunctionsClass.setMessage(mSetMessage, "Le mot de passe est vide, veuillez le renseigner !", 0);
 
             // Si le format du mail correspond au format normal d'une adresse, alors on vérifie si un utilisateur existe ou non
-            if(bMailConfirm && zPassword != "")
+            if(bMailConfirm && !zPassword.isEmpty())
             {
                 // On instancie le message à vide
                 cFunctionsClass.setMessage(mSetMessage, "", 0);
                 // On envoi les données à la fonction qui appelle l'API
                 cLoginAction.sendLogin(mContext, zMail, zPassword, new VolleyCallback() {
                     @Override
-                    public void onSuccessResponse(JSONObject result) {
+                    public void onSuccessResponse(JSONObject result) throws JSONException {
+                        System.out.println(result);
                         // Si la réponse est un message d'erreur alors le JSON contient un champ "response", ce qui veut dire que la combinaison est incorrecte
                         if(result.has("response"))
                         {
@@ -101,23 +105,31 @@ public class MainActivity extends AppCompatActivity {
                             }
                             else // Sinon l'utilisateur n'a plus d'essais
                             {
-                                //cLoginAction.blockAccount(mContext, zMail); // L'on appelle l'API pour bloquer son compte et on le lui signale
-                                cFunctionsClass.setMessage(mSetMessage, "Votre compte est bloqué, veuillez contacter un administrateur.", 0);
-                                return;
+                                String statut = "0";
+                                cLoginAction.changeStatutAccount(mContext, zMail, zPassword, statut, new VolleyCallback() {
+                                    @Override
+                                    public void onSuccessResponse(JSONObject result) throws JSONException {
+                                        System.out.println(result);
+                                        // L'on appelle l'API pour bloquer son compte et on le lui signale
+                                        cFunctionsClass.setMessage(mSetMessage, "Votre compte est bloqué, veuillez contacter un administrateur.", 0);
+                                        return;
+                                    }
+                                });
                             }
                         }
                         else if (result.has("blocked")) // Si le JSON contient un champ "blocked" cela veut dire que le compte de l'utilisateur existe mais a été bloqué
                         {
                             nbEssais = 0;
-                            cFunctionsClass.setMessage(mSetMessage, "Votre compte est bloqué, veuillez contacter un administrateur.", 0);
+                            cFunctionsClass.setMessage(mSetMessage, result.getString("blocked"), 0);
                             return;
                         }
                         else // Sinon l'utilisateur a toujours 5 essais
+                        {
                             nbEssais = 5;
+                            goToGestionUser(view);
+                        }
                     }
                 });
-
-                // Si l'utilisateur existe, alors il se connecte, sinon un message d'erreur s'affichera
             }
         }
     };

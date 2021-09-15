@@ -14,9 +14,27 @@ class LoginController {
 
                 if(sqlResponse[0] == null)
                     doc[0] = JSON.parse('{"response" : "Il n\'y a pas d\'utilisateur qui corresponde à ces informations."}');
+                else if (sqlResponse[0].statut == 0)
+                    doc[0] = JSON.parse('{"blocked" : "Le compte utilisateur est bloqué."}');
                 else
                     doc[0] = sqlResponse[0];
+                
+                res.status(200)
+                .send(doc[0])
+                .end();
+            }
+        });
+    };
 
+    changeStatut = (req, res, next) => {
+        connexionSQL.query(`UPDATE utilisateur SET statut = '${req.body.statut}' WHERE mail = '${req.body.mail}'`, (error, sqlResponse) => {
+            if (error)
+                console.log("Error: ", error);
+            else 
+            {
+                let doc = [];
+                doc[0] = JSON.parse('{"response" : "La modification a été effectuée."}');
+                
                 res.status(200)
                 .send(doc[0])
                 .end();

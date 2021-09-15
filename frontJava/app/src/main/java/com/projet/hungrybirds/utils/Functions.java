@@ -33,6 +33,13 @@ public class Functions {
         return target.getText().toString();
     }
 
+    /**
+     * Set a message in the passed Textview
+     *
+     * @param textView The targeted TextView
+     * @param message  The message
+     * @param nbEssais If there is a count of try it will appears in the message
+     */
     public void setMessage (TextView textView, String message, int nbEssais)
     {
         this.phraseMessage = message;

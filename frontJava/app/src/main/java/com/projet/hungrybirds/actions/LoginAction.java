@@ -36,11 +36,14 @@ public class LoginAction extends AppCompatActivity {
         params.put("mail", mail);
         params.put("password", password);
 
-
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(params), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                callback.onSuccessResponse(response);
+                try {
+                    callback.onSuccessResponse(response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         }, new Response.ErrorListener() {
             @Override
@@ -58,7 +61,45 @@ public class LoginAction extends AppCompatActivity {
         };
 
         queue.add(jsonObjectRequest);
-    }
+    };
+
+    public void changeStatutAccount(Context context, String mail, String password, String statut, VolleyCallback callback)
+    {
+        RequestQueue queue = Volley.newRequestQueue(context);
+        String url = "http://10.0.2.2:3001/login/changeStatutAccount";
+
+        // Creation of the JSON body
+        HashMap<String, String> params = new HashMap<String, String>();
+        params.put("mail", mail);
+        params.put("password", password);
+        params.put("statut", statut);
+        System.out.println(params);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(params), new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    callback.onSuccessResponse(response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("Error : ", error.toString());
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError
+            {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+
+        queue.add(jsonObjectRequest);
+    };
 
     /**
      * This function is an exemple of a GET method.
@@ -97,10 +138,5 @@ public class LoginAction extends AppCompatActivity {
         });
 
         queue.add(stringRequest);
-    }
-
-    public void blockAccount(Context mContext, String zMail)
-    {
-
     }
 }
