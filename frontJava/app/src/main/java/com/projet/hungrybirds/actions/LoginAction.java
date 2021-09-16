@@ -83,7 +83,7 @@ public class LoginAction extends AppCompatActivity {
      * @param statut    1 or 0 / 1 => Activated | 0 => Desactivated
      * @param callback  Returns the response in a callback
      */
-    public void changeStatutAccount(Context context, String mail, String password, String statut, VolleyCallback callback)
+    public void changeStatusAccount(Context context, String mail, String password, String statut, VolleyCallback callback)
     {
         RequestQueue queue = Volley.newRequestQueue(context);
         String url = "http://10.0.2.2:3001/login/changeStatutAccount";

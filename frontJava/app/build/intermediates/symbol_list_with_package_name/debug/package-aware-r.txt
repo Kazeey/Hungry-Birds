@@ -1926,6 +1926,7 @@ id buttonConnexion
 id buttonNoRegister
 id buttonPanel
 id buttonRegister
+id buttonReturn
 id cache_measures
 id cancel_button
 id carryVelocity
@@ -2147,6 +2148,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id phraseInscription
 id pin
 id position
 id postLayout
@@ -2251,7 +2253,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textViewTest
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2490,6 +2491,7 @@ string bottomsheet_action_expand_halfway
 string buttonConnexion
 string buttonNoRegister
 string buttonRegister
+string buttonReturn
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -2503,6 +2505,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string inscriptionPageMessage
 string item_view_role_description
 string material_clock_display_divider
 string material_clock_toggle_content_description
@@ -2564,12 +2567,18 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string placeholderAddress
+string placeholderFirstname
 string placeholderMail
+string placeholderName
 string placeholderPassword
+string placeholderPhonenumber
+string placeholderPostalCode
+string placeholderTown
 string search_menu_title
 string setMessage
+string statusSavedKey
 string status_bar_notification_info_overflow
-string statutSavedKey
 string timeDestructionSavedKey
 string userIdSavedKey
 style AlertDialog_AppCompat

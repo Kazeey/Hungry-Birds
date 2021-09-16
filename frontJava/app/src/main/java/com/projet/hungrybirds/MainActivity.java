@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Context mContext;
 
-    public String statut;
+    public String status;
     public int nbEssais;
 
     // Pour les durées seulement, Si 0 = 15min | Si 1 = 24h
@@ -128,8 +128,8 @@ public class MainActivity extends AppCompatActivity {
                             }
                             else // Sinon l'utilisateur n'a plus d'essais
                             {
-                                String statut = "0";
-                                cLoginAction.changeStatutAccount(mContext, zMail, zPassword, statut, new VolleyCallback() {
+                                String status = "0";
+                                cLoginAction.changeStatusAccount(mContext, zMail, zPassword, status, new VolleyCallback() {
                                     @Override
                                     public void onSuccessResponse(JSONObject result) throws JSONException {
                                         System.out.println(result);
@@ -153,13 +153,13 @@ public class MainActivity extends AppCompatActivity {
                             switch (result.getInt("role"))
                             {
                                 case 0 :
-                                    statut = "Client";
+                                    status = "Client";
                                     break;
                                 case 1:
-                                    statut = "Association";
+                                    status = "Association";
                                     break;
                                 case 2:
-                                    statut = "Vendeur";
+                                    status = "Vendeur";
                                     break;
                             }
 
@@ -173,8 +173,6 @@ public class MainActivity extends AppCompatActivity {
                                     break;
                             }
 
-                            System.out.println("Statut : " + statut + " | timeConnexion : " + time);
-
                             Calendar now = Calendar.getInstance();
                             now.add(Calendar.MINUTE, time);
                             Long timeDestruction = now.getTimeInMillis();
@@ -186,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
                             editor.putLong(getString(R.string.timeDestructionSavedKey), timeDestruction);
                             editor.putBoolean(getString(R.string.connectedSavedKey), true);
                             editor.putInt(getString(R.string.userIdSavedKey), result.getInt("id_utilisateur"));
-                            editor.putString(getString(R.string.statutSavedKey), statut);
+                            editor.putString(getString(R.string.statusSavedKey), status);
                             editor.apply();
 
                             goToGestionUser();

@@ -26,7 +26,7 @@ class LoginController {
         });
     };
 
-    changeStatut = (req, res, next) => {
+    changeStatus = (req, res, next) => {
         connexionSQL.query(`UPDATE utilisateur SET statut = '${req.body.statut}' WHERE mail = '${req.body.mail}'`, (error, sqlResponse) => {
             if (error)
                 console.log("Error: ", error);
