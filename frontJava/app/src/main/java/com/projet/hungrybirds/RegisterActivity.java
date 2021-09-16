@@ -18,18 +18,10 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        cFunctions.redirect(mContext);
     }
 
     public void test()
     {
-        boolean bVerification = cFunctions.verification(this);
-        String test;
-        if(bVerification)
-            test = "true";
-        else
-            test = "false";
-        ((TextView) findViewById(R.id.textViewTest)).setText(test);
+
     }
 }

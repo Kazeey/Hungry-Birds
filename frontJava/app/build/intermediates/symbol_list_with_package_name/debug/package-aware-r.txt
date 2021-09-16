@@ -1926,7 +1926,6 @@ id buttonConnexion
 id buttonNoRegister
 id buttonPanel
 id buttonRegister
-id buttonTest
 id cache_measures
 id cancel_button
 id carryVelocity

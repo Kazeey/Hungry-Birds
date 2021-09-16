@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Instanciation des variables liées aux composants
     EditText mEditMail, mEditPassword;
-    Button mButtonConnexion;
+    Button mButtonConnexion, mButtonRegister, mButtonNoRegister;
     TextView mSetMessage;
 
     SharedPreferences sharedPreferences;
@@ -61,7 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Récupération des boutons
         mButtonConnexion = (Button)findViewById(R.id.buttonConnexion);
-        mButtonConnexion.setOnClickListener(mCheckLogin);
+        mButtonRegister = (Button)findViewById(R.id.buttonRegister);
+        mButtonNoRegister = (Button)findViewById(R.id.buttonNoRegister);
+
+        // Instanciation des onClicks
+        mButtonConnexion.setOnClickListener(checkLogin);
+        mButtonRegister.setOnClickListener(goToRegister);
+        //mButtonNoRegister.setOnClickListener();
 
         // Récupération du texte servant à l'affichage du message
         mSetMessage = (TextView) findViewById(R.id.setMessage);
@@ -69,12 +75,16 @@ public class MainActivity extends AppCompatActivity {
         // Instanciation du nombre d'essais pour une combinaison mail / password erronée
         nbEssais = 5;
 
+        // Destruction des sharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("file_pref", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear().apply();
     }
 
     /**
      * Vérification des inputs mail et password
      */
-    private View.OnClickListener mCheckLogin = new View.OnClickListener()
+    private View.OnClickListener checkLogin = new View.OnClickListener()
     {
         @Override
         public void onClick(View view) {
@@ -187,11 +197,14 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    public void goToRegister()
+    private View.OnClickListener goToRegister = new View.OnClickListener()
     {
-        Intent intent = new Intent(this, RegisterActivity.class);
-        startActivity(intent);
-    }
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(mContext, RegisterActivity.class);
+            startActivity(intent);
+        }
+    };
 
     public void goToGestionUser()
     {
@@ -199,5 +212,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // Méthode pour aller sur le noRegister
+    // TODO : Décommenter la function
+    /*
+    private View.OnClickListener goToGestionUser = new View.OnClickListener()
+    {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(mContext, GestionUserActivity.class);
+            startActivity(intent);
+        }
+    };
+     */
+
 }

@@ -27,11 +27,15 @@ import java.util.Map;
 public class LoginAction extends AppCompatActivity {
 
     /**
+     * This function sends the logins to the back and get an answer
+     * Either the result contains the user data
+     * Either the result contains the response field, to signal that no user was found
+     * Either the result contains the blocked field, to signal that the account is blocked
      *
-     * @param context
-     * @param mail
-     * @param password
-     * @param callback
+     * @param context   Context of the current activity
+     * @param mail      Mail of the user
+     * @param password  Password of the user
+     * @param callback  Returns the response in a callbak
      */
     public void sendLogin(Context context, String mail, String password, VolleyCallback callback)
     {
@@ -71,12 +75,13 @@ public class LoginAction extends AppCompatActivity {
     };
 
     /**
+     * This function sends the statut to the back.
      *
-     * @param context
-     * @param mail
-     * @param password
-     * @param statut
-     * @param callback
+     * @param context   Context of the current activity
+     * @param mail      Mail of the user
+     * @param password  Password of the user
+     * @param statut    1 or 0 / 1 => Activated | 0 => Desactivated
+     * @param callback  Returns the response in a callback
      */
     public void changeStatutAccount(Context context, String mail, String password, String statut, VolleyCallback callback)
     {
