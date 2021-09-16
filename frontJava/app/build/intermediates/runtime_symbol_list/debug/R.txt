@@ -1925,6 +1925,7 @@ int id buttonConnexion 0x7f080062
 int id buttonNoRegister 0x7f080063
 int id buttonPanel 0x7f080064
 int id buttonRegister 0x7f080065
+int id buttonTest 0x7f0801da
 int id cache_measures 0x7f080066
 int id cancel_button 0x7f080067
 int id carryVelocity 0x7f080068
@@ -2250,6 +2251,7 @@ int id textSpacerNoButtons 0x7f0801a7
 int id textSpacerNoTitle 0x7f0801a8
 int id textStart 0x7f0801a9
 int id textTop 0x7f0801aa
+int id textViewTest 0x7f0801db
 int id text_input_end_icon 0x7f0801ab
 int id text_input_error_icon 0x7f0801ac
 int id text_input_start_icon 0x7f0801ad
@@ -2366,6 +2368,7 @@ int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_gestion_user 0x7f0b001c
 int layout activity_main 0x7f0b001d
+int layout activity_register 0x7f0b0072
 int layout custom_dialog 0x7f0b001e
 int layout design_bottom_navigation_item 0x7f0b001f
 int layout design_bottom_sheet_dialog 0x7f0b0020
@@ -2492,6 +2495,7 @@ int string character_counter_overflowed_content_description 0x7f0e0023
 int string character_counter_pattern 0x7f0e0024
 int string chip_text 0x7f0e0025
 int string clear_text_end_icon_content_description 0x7f0e0026
+int string connectedSavedKey 0x7f0e0070
 int string connexionPageMessage 0x7f0e0027
 int string error_icon_content_description 0x7f0e0028
 int string exposed_dropdown_menu_content_description 0x7f0e0029
@@ -2565,6 +2569,9 @@ int string placeholderPassword 0x7f0e006c
 int string search_menu_title 0x7f0e006d
 int string setMessage 0x7f0e006e
 int string status_bar_notification_info_overflow 0x7f0e006f
+int string statutSavedKey 0x7f0e0071
+int string timeDestructionSavedKey 0x7f0e0072
+int string userIdSavedKey 0x7f0e0073
 int style AlertDialog_AppCompat 0x7f0f0000
 int style AlertDialog_AppCompat_Light 0x7f0f0001
 int style AndroidThemeColorAccentYellow 0x7f0f0002

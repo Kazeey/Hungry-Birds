@@ -22,6 +22,9 @@
         android:theme="@style/Theme.HungryBirds"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.projet.hungrybirds.RegisterActivity"
+            android:exported="true" />
+        <activity
             android:name="com.projet.hungrybirds.GestionUserActivity"
             android:exported="true" />
         <activity

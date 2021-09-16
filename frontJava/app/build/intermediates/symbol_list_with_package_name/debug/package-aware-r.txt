@@ -1926,6 +1926,7 @@ id buttonConnexion
 id buttonNoRegister
 id buttonPanel
 id buttonRegister
+id buttonTest
 id cache_measures
 id cancel_button
 id carryVelocity
@@ -2251,6 +2252,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textViewTest
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2367,6 +2369,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_gestion_user
 layout activity_main
+layout activity_register
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2493,6 +2496,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string connectedSavedKey
 string connexionPageMessage
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -2566,6 +2570,9 @@ string placeholderPassword
 string search_menu_title
 string setMessage
 string status_bar_notification_info_overflow
+string statutSavedKey
+string timeDestructionSavedKey
+string userIdSavedKey
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

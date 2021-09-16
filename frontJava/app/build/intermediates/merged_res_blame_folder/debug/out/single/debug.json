@@ -66,5 +66,9 @@
     {
         "merged": "C:\\Website\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Website\\Hungry-Birds\\frontJava\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Website\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_register.xml.flat",
+        "source": "C:\\Website\\Hungry-Birds\\frontJava\\app\\src\\main\\res\\layout\\activity_register.xml"
     }
 ]

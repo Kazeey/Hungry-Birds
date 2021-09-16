@@ -7,4 +7,8 @@
     <string name="buttonRegister">S\'inscrire</string>
     <string name="buttonNoRegister">Continuer sans se connecter</string>
     <string name="setMessage"> </string>
+    <string name="userIdSavedKey">UserId</string>
+    <string name="statutSavedKey">Statut</string>
+    <string name="connectedSavedKey">Connected</string>
+    <string name="timeDestructionSavedKey">TimeDestruction</string>
 </resources>

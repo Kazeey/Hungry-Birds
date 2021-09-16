@@ -18,6 +18,10 @@ import com.projet.hungrybirds.utils.Functions;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Instanciation du nombre d'essais pour une combinaison mail / password erronée
         nbEssais = 5;
+
     }
 
     /**
@@ -89,13 +94,13 @@ public class MainActivity extends AppCompatActivity {
 
             // Si l'un des deux champs est vide
             if (zPassword.isEmpty())
-                cFunctionsClass.setMessage(mSetMessage, "Le mot de passe est vide, veuillez le renseigner !", 0);
+                cFunctionsClass.setMessage(mSetMessage, "L'un des deux champs est vide, veuillez le renseigner !", 0);
 
             // Si le format du mail correspond au format normal d'une adresse, alors on vérifie si un utilisateur existe ou non
             if(bMailConfirm && !zPassword.isEmpty())
             {
                 // On instancie le message à vide
-                cFunctionsClass.setMessage(mSetMessage, "", 0);
+                cFunctionsClass.setMessage(mSetMessage, getString(R.string.setMessage), 0);
                 // On envoi les données à la fonction qui appelle l'API
                 cLoginAction.sendLogin(mContext, zMail, zPassword, new VolleyCallback() {
                     @Override
@@ -151,15 +156,30 @@ public class MainActivity extends AppCompatActivity {
                             switch (timeConnexion)
                             {
                                 case 0 :
-                                    time = 900000;
+                                    time = 15;
                                     break;
                                 case 1 :
-                                    time = ((900000 * 4) * 24);
+                                    time = 1440;
                                     break;
                             }
 
                             System.out.println("Statut : " + statut + " | timeConnexion : " + time);
-                            //goToGestionUser(view);
+
+                            Calendar now = Calendar.getInstance();
+                            now.add(Calendar.MINUTE, time);
+                            Long timeDestruction = now.getTimeInMillis();
+
+                            // Initialisation des SharedPreferences
+                            SharedPreferences sharedPreferences = getSharedPreferences("file_pref", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                            editor.putLong(getString(R.string.timeDestructionSavedKey), timeDestruction);
+                            editor.putBoolean(getString(R.string.connectedSavedKey), true);
+                            editor.putInt(getString(R.string.userIdSavedKey), result.getInt("id_utilisateur"));
+                            editor.putString(getString(R.string.statutSavedKey), statut);
+                            editor.apply();
+
+                            goToGestionUser();
                         }
                     }
                 });
@@ -167,7 +187,13 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    public void goToGestionUser(View view)
+    public void goToRegister()
+    {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToGestionUser()
     {
         Intent intent = new Intent(this, GestionUserActivity.class);
         startActivity(intent);

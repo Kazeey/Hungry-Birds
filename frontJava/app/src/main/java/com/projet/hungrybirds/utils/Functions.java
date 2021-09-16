@@ -1,12 +1,21 @@
 package com.projet.hungrybirds.utils;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.projet.hungrybirds.MainActivity;
+import com.projet.hungrybirds.R;
+import com.projet.hungrybirds.RegisterActivity;
+
+import java.util.Calendar;
 import java.util.Date;
 
 public class Functions {
@@ -61,8 +70,44 @@ public class Functions {
         textView.setText(this.phraseMessage);
     }
 
-    public void verification()
+    /**
+     * Check if the user is connected or not, and then setup the sharedPreferences if not
+     *
+     * @param context Context of the current activity
+     * @return        Returns true if the user is connected, or false if not
+     */
+    public boolean verification(Context context)
     {
-        
+        Calendar timeNow = Calendar.getInstance();
+        System.out.println(context);
+        SharedPreferences sharedPreferences = context.getSharedPreferences("file_pref", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        Long timeDestruction = sharedPreferences.getLong("TimeDestruction", 0);
+
+        if(sharedPreferences.getBoolean("Connected", false))
+        {
+            if(timeNow.getTimeInMillis() > timeDestruction)
+            {
+                editor.putBoolean("Connected", false);
+                editor.apply();
+                return false;
+            }
+            else
+                return true;
+        }
+        else
+            return false;
+    }
+
+    /**
+     * Redirect from the current activiy to the main one if you're not connected
+     *
+     * @param context Context of the current activity
+     */
+    public void redirect(Context context)
+    {
+        Intent intent = new Intent(context, MainActivity.class);
+        context.startActivity(intent);
     }
 }

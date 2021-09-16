@@ -11,52 +11,58 @@
 9-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:6:5-67
-11-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:6:22-64
+11-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:7:5-67
+11-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:7:22-64
 12
 13    <application
-13-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:7:5-28:19
+13-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:9:5-33:19
 14        android:allowBackup="true"
-14-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:8:9-35
+14-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:10:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 15-->[androidx.core:core:1.5.0] C:\Users\quentin\.gradle\caches\transforms-3\255d63c0f9f8f5d12ab3191ffb377750\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 16        android:debuggable="true"
 17        android:icon="@mipmap/ic_launcher"
-17-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:9:9-43
+17-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:11:9-43
 18        android:label="@string/app_name"
-18-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:10:9-41
+18-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:12:9-41
 19        android:roundIcon="@mipmap/ic_launcher_round"
-19-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:11:9-54
+19-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:9-54
 20        android:supportsRtl="true"
-20-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:12:9-35
+20-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:14:9-35
 21        android:testOnly="true"
 22        android:theme="@style/Theme.HungryBirds"
-22-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:9-49
+22-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:15:9-49
 23        android:usesCleartextTraffic="true" >
-23-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:14:9-44
+23-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:16:9-44
 24        <activity
-24-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:16:9-18:39
-25            android:name="com.projet.hungrybirds.GestionUserActivity"
-25-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:17:13-48
+24-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:9-20:39
+25            android:name="com.projet.hungrybirds.RegisterActivity"
+25-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:19:13-45
 26            android:exported="true" />
-26-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:13-36
+26-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:20:13-36
 27        <activity
-27-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:19:9-27:20
-28            android:name="com.projet.hungrybirds.MainActivity"
-28-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:20:13-41
-29            android:exported="true" >
-29-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:21:13-36
-30            <intent-filter>
-30-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:22:13-26:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:17-69
-31-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:25:17-77
-33-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:25:27-74
-34            </intent-filter>
-35        </activity>
-36    </application>
-37
-38</manifest>
+27-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:21:9-23:39
+28            android:name="com.projet.hungrybirds.GestionUserActivity"
+28-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:22:13-48
+29            android:exported="true" />
+29-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:13-36
+30        <activity
+30-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:24:9-32:20
+31            android:name="com.projet.hungrybirds.MainActivity"
+31-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:25:13-41
+32            android:exported="true" >
+32-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:26:13-36
+33            <intent-filter>
+33-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:27:13-31:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:28:17-69
+34-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:28:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:30:17-77
+36-->C:\Website\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:30:27-74
+37            </intent-filter>
+38        </activity>
+39    </application>
+40
+41</manifest>
