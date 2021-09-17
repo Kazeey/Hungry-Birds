@@ -1,6 +1,8 @@
 package com.projet.hungrybirds;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -18,9 +20,7 @@ import com.projet.hungrybirds.utils.Functions;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -199,8 +199,35 @@ public class MainActivity extends AppCompatActivity {
     {
         @Override
         public void onClick(View view) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
+            alert.setTitle(R.string.dialogTypeActivity);
             Intent intent = new Intent(mContext, RegisterActivity.class);
-            startActivity(intent);
+
+            alert.setNeutralButton(R.string.client, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    intent.putExtra("activityDesign", getString(R.string.client));
+                    startActivity(intent);
+                }
+            });
+
+            alert.setPositiveButton(R.string.association, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    intent.putExtra("activityDesign", getString(R.string.association));
+                    startActivity(intent);
+                }
+            });
+
+            alert.setNegativeButton(R.string.vendeur, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    intent.putExtra("activityDesign", getString(R.string.vendeur));
+                    startActivity(intent);
+                }
+            });
+
+            alert.show();
         }
     };
 
@@ -210,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // TODO : Décommenter la function
+    //TODO : Décommenter la function
     /*
     private View.OnClickListener goToGestionUser = new View.OnClickListener()
     {

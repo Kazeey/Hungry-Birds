@@ -19,4 +19,8 @@
     <string name="statusSavedKey">Statut</string>
     <string name="connectedSavedKey">Connected</string>
     <string name="timeDestructionSavedKey">TimeDestruction</string>
+    <string name="dialogTypeActivity">Quel type de compte souhaitez vous créer ?</string>
+    <string name="client">Client</string>
+    <string name="association">Association</string>
+    <string name="vendeur">Vendeur</string>
 </resources>
