@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToGestionUser()
     {
-        Intent intent = new Intent(this, GestionUserActivity.class);
+        Intent intent = new Intent(mContext, GestionUserActivity.class);
         startActivity(intent);
     }
 

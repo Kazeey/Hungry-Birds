@@ -107,6 +107,7 @@ public class Functions {
      */
     public void redirect(Context context)
     {
+        // TODO : Rediriger vers une activité tampon pour dire que la session est terminée
         Intent intent = new Intent(context, MainActivity.class);
         context.startActivity(intent);
     }

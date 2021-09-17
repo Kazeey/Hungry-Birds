@@ -10,6 +10,8 @@
     <string name="placeholderAddress">Adresse</string>
     <string name="placeholderTown">Ville</string>
     <string name="placeholderPostalCode">Code Postal</string>
+    <string name="placeholderStructureName">Nom de la structure</string>
+    <string name="placeholderSiret">N° Siret</string>
     <string name="buttonConnexion">Se connecter</string>
     <string name="buttonRegister">S\'inscrire</string>
     <string name="buttonNoRegister">Continuer sans se connecter</string>
