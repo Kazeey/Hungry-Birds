@@ -21,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Calendar;
+import java.util.HashMap;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,9 +35,8 @@ public class MainActivity extends AppCompatActivity {
     Button mButtonConnexion, mButtonRegister, mButtonNoRegister;
     TextView mSetMessage;
 
-    SharedPreferences sharedPreferences;
-
-    private Context mContext;
+    // Récupération du context
+    private Context mContext = this;
 
     public String status;
     public int nbEssais;
@@ -55,9 +55,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         super.onResume();
         setContentView(R.layout.activity_main);
-
-        // Récupération du contexte
-        mContext = this;
 
         // Récupération des boutons
         mButtonConnexion = (Button)findViewById(R.id.buttonConnexion);
@@ -112,7 +109,13 @@ public class MainActivity extends AppCompatActivity {
                 // On instancie le message à vide
                 cFunctionsClass.setMessage(mSetMessage, getString(R.string.setMessage), 0);
                 // On envoi les données à la fonction qui appelle l'API
-                cLoginAction.sendLogin(mContext, zMail, zPassword, new VolleyCallback() {
+
+                // Creation of the JSON body
+                HashMap<String, String> object = new HashMap<String, String>();
+                object.put("mail", zMail);
+                object.put("password", zPassword);
+
+                cLoginAction.sendLogin(mContext, object, new VolleyCallback() {
                     @Override
                     public void onSuccessResponse(JSONObject result) throws JSONException {
                         System.out.println(result);

@@ -33,21 +33,15 @@ public class LoginAction extends AppCompatActivity {
      * Either the result contains the blocked field, to signal that the account is blocked
      *
      * @param context   Context of the current activity
-     * @param mail      Mail of the user
-     * @param password  Password of the user
+     * @param object    JSON Object of the user's data
      * @param callback  Returns the response in a callbak
      */
-    public void sendLogin(Context context, String mail, String password, VolleyCallback callback)
+    public void sendLogin(Context context, HashMap<String, String> object, VolleyCallback callback)
     {
         RequestQueue queue = Volley.newRequestQueue(context);
         String url = "http://10.0.2.2:3001/login/connect";
 
-        // Creation of the JSON body
-        HashMap<String, String> params = new HashMap<String, String>();
-        params.put("mail", mail);
-        params.put("password", password);
-
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(params), new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(object), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {

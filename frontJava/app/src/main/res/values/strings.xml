@@ -25,4 +25,7 @@
     <string name="client">Client</string>
     <string name="association">Association</string>
     <string name="vendeur">Vendeur</string>
+    <string name="createClientAccount">Création d\'un compte client :</string>
+    <string name="createAssocAccount">Création d\'un compte d\'association :</string>
+    <string name="createVendeurAccount">Création d\'un compte vendeur :</string>
 </resources>
