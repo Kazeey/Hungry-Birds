@@ -97,11 +97,11 @@ public class MainActivity extends AppCompatActivity {
 
             // Si le format du mail ne correspond pas au format attendu
             if (!bMailConfirm)
-                cFunctionsClass.setMessage(mSetMessage, "Le format de l'email n'est pas correct, veuillez le modifier !", 0);
+                cFunctionsClass.setMessage(mSetMessage, getString(R.string.incorrectMailFormat), 0);
 
             // Si l'un des deux champs est vide
             if (zPassword.isEmpty())
-                cFunctionsClass.setMessage(mSetMessage, "L'un des deux champs est vide, veuillez le renseigner !", 0);
+                cFunctionsClass.setMessage(mSetMessage, getString(R.string.emptyField), 0);
 
             // Si le format du mail correspond au format normal d'une adresse, alors on vérifie si un utilisateur existe ou non
             if(bMailConfirm && !zPassword.isEmpty())
@@ -118,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
                 cLoginAction.sendLogin(mContext, object, new VolleyCallback() {
                     @Override
                     public void onSuccessResponse(JSONObject result) throws JSONException {
-                        System.out.println(result);
                         // Si la réponse est un message d'erreur alors le JSON contient un champ "response", ce qui veut dire que la combinaison est incorrecte
                         if(result.has("response"))
                         {
@@ -127,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                             {
                                 // On décrément au fur et à mesure de ses erreurs, et on actualise le message
                                 nbEssais = nbEssais - 1;
-                                cFunctionsClass.setMessage(mSetMessage, "Nombre d'essais restants : ", nbEssais);
+                                cFunctionsClass.setMessage(mSetMessage, getString(R.string.numberTries), nbEssais);
                             }
                             else // Sinon l'utilisateur n'a plus d'essais
                             {
@@ -137,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                                     public void onSuccessResponse(JSONObject result) throws JSONException {
                                         System.out.println(result);
                                         // L'on appelle l'API pour bloquer son compte et on le lui signale
-                                        cFunctionsClass.setMessage(mSetMessage, "Votre compte est bloqué, veuillez contacter un administrateur.", 0);
+                                        cFunctionsClass.setMessage(mSetMessage, getString(R.string.accountBlocked), 0);
                                         return;
                                     }
                                 });

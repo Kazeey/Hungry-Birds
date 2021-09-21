@@ -23,10 +23,12 @@
         android:usesCleartextTraffic="true" >
         <activity
             android:name="com.projet.hungrybirds.RegisterActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.projet.hungrybirds.GestionUserActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.projet.hungrybirds.MainActivity"
             android:exported="true" >

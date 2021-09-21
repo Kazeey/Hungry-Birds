@@ -16,9 +16,11 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".GestionUserActivity"
             android:exported="true" />
         <activity

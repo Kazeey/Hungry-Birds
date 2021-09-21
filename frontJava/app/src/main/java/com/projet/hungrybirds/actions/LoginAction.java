@@ -44,9 +44,12 @@ public class LoginAction extends AppCompatActivity {
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(object), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try {
+                try
+                {
                     callback.onSuccessResponse(response);
-                } catch (JSONException e) {
+                }
+                catch (JSONException e)
+                {
                     e.printStackTrace();
                 }
             }
@@ -91,9 +94,12 @@ public class LoginAction extends AppCompatActivity {
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(params), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try {
+                try
+                {
                     callback.onSuccessResponse(response);
-                } catch (JSONException e) {
+                }
+                catch (JSONException e)
+                {
                     e.printStackTrace();
                 }
             }
@@ -129,7 +135,8 @@ public class LoginAction extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                try {
+                try
+                {
                     JSONArray jsonArray = new JSONArray(response);
                     JSONObject obj;
                     for(int i = 0; i < jsonArray.length(); i++)

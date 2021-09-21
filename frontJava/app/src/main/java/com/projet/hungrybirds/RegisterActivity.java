@@ -14,9 +14,16 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.projet.hungrybirds.actions.RegisterAction;
+import com.projet.hungrybirds.interfaces.VolleyCallback;
 import com.projet.hungrybirds.utils.Functions;
 
-public class RegisterActivity extends AppCompatActivity {
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+
+public class RegisterActivity extends AppCompatActivity
+{
 
     // Récupération du context
     private Context mContext = this;
@@ -27,13 +34,15 @@ public class RegisterActivity extends AppCompatActivity {
     Button mButtonReturn, mButtonRegister;
     ScrollView mStructureScrollView;
     EditText mEditName, mEditFirstname, mEditMail, mEditPassword, mEditPhoneNumber, mEditAddress, mEditTown, mEditPostalCode, mEditStructureName, mEditSiretNumber;
+    TextView mMailError;
 
-    String zStatus;
+    String zStatus, zRole;
 
     boolean bStructure;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_register);
@@ -44,14 +53,17 @@ public class RegisterActivity extends AppCompatActivity {
         {
             case "Client" :
                 bStructure = false;
+                zRole = "0";
                 ((TextView)findViewById(R.id.textViewRegisterPage)).setText(getString(R.string.createClientAccount));
                 break;
             case "Association" :
                 bStructure = true;
+                zRole = "1";
                 ((TextView)findViewById(R.id.textViewRegisterPage)).setText(getString(R.string.createAssocAccount));
                 break;
             case "Vendeur" :
                 bStructure = true;
+                zRole = "2";
                 ((TextView)findViewById(R.id.textViewRegisterPage)).setText(getString(R.string.createVendeurAccount));
                 break;
         }
@@ -100,16 +112,18 @@ public class RegisterActivity extends AppCompatActivity {
         // Instanciation des boutons
         mButtonReturn.setOnClickListener(returnToLogin);
         mButtonRegister.setOnClickListener(checkRegister);
+
+        // Récupération des TextViews
+        mMailError = findViewById(R.id.textViewMailError);
     }
 
     private TextWatcher registerLoginWatcher = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-        }
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
 
         @Override
-        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+        {
             String zNameInput, zFirstnameInput, zMailInput, zPasswordInput, zPhoneNumberInput, zAddressInput, zTownInput, zPostalCodeInput, zStructureNameInput, zSiretNumberInput;
 
             zNameInput = mEditName.getText().toString().trim();
@@ -139,19 +153,46 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         @Override
-        public void afterTextChanged(Editable editable) {
-
-        }
+        public void afterTextChanged(Editable editable) {}
     };
 
-    private View.OnClickListener checkRegister = new View.OnClickListener() {
+    private View.OnClickListener checkRegister = new View.OnClickListener()
+    {
+
         @Override
-        public void onClick(View view) {
+        public void onClick(View view)
+        {
+            HashMap<String, String> object = new HashMap<>();
+            object.put("nom",cFunctionsClass.getTextFromInput(mEditName));
+            object.put("prenom",cFunctionsClass.getTextFromInput(mEditFirstname));
+            object.put("mail",cFunctionsClass.getTextFromInput(mEditMail));
+            object.put("password",cFunctionsClass.getTextFromInput(mEditPassword));
+            object.put("telephone",cFunctionsClass.getTextFromInput(mEditPhoneNumber));
+            object.put("adresse",cFunctionsClass.getTextFromInput(mEditAddress));
+            object.put("ville",cFunctionsClass.getTextFromInput(mEditTown));
+            object.put("code_postal",cFunctionsClass.getTextFromInput(mEditPostalCode));
+            object.put("role", zRole);
+            object.put("statut", "1");
 
+            cRegisterAction.createAccount(mContext, object, new VolleyCallback() {
+                @Override
+                public void onSuccessResponse(JSONObject result) throws JSONException {
+                    if(result.has("response"))
+                    {
+                        cFunctionsClass.setMessage(mMailError, getString(R.string.infoAlreadyUsed), 0);
+                    }
+                    else
+                    {
+                        cFunctionsClass.setMessage(mMailError, "", 0);
+                        System.out.println(result);
+                    }
+                }
+            });
         }
     };
 
-    private View.OnClickListener returnToLogin = new View.OnClickListener() {
+    private View.OnClickListener returnToLogin = new View.OnClickListener()
+    {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(mContext, MainActivity.class);

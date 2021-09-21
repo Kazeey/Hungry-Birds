@@ -33,18 +33,38 @@ class UtilisateurController {
     };
 
     create = (req, res, next) => {
-        connexionSQL.query(`INSERT INTO utilisateur SET ?`, req.body, (error, sqlResponse) => {
-            if (error) 
+        connexionSQL.query(`SELECT * FROM utilisateur WHERE mail = '${req.body.mail}' OR telephone='${req.body.telephone}'`, (error, sqlResponseSelect) => {
+            if(error)
+                console.log("Error : ", error);
+            else
             {
-                console.log("Error: ", error);
-            } 
-            else 
-            {
-                res.status(201)
-                .send("Utilisateur créé avec succès.")
-                .end();
-            }
-        });
+                let doc = [];
+                if(sqlResponseSelect.length > 0)
+                {
+                    doc[0] = JSON.parse('{"response" : "L\'adresse mail et/ou le numéro de téléphone sont déjà utilisés."}');
+                    res.status(200)
+                    .send(doc[0])
+                    .end();
+                }
+                else
+                {
+                    connexionSQL.query(`INSERT INTO utilisateur SET ?`, req.body, (error, sqlResponseInsert) => {
+                    if (error) 
+                    {
+                        console.log("Error: ", error);
+                    } 
+                    else 
+                    {
+                        doc[0] = JSON.parse('{"result" : "Utilisateur créé."}');
+                        res.status(201)
+                        .send(doc[0])
+                        .end();
+                    }
+                });
+                }
+            }           
+        })
+        
     };
 
     update = (req, res, next) => {
