@@ -28,9 +28,10 @@
     <string name="createClientAccount">Création d\'un compte client :</string>
     <string name="createAssocAccount">Création d\'un compte d\'association :</string>
     <string name="createVendeurAccount">Création d\'un compte vendeur :</string>
-    <string name="infoAlreadyUsed">L\'adresse mail et/ou le numéro de téléphone sont déjà utilisés.</string>
+    <string name="infoAlreadyUsed">L\'adresse mail et/ou le numéro de téléphone sont déjà utilisés.\nVeuillez vous connecter à votre compte pour ajouter une structure</string>
     <string name="incorrectMailFormat">Le format de l\'email est incorrect, veuillez le modifier !</string>
     <string name="emptyField">L\'un des deux champs est vide, veuillez le renseigner !</string>
     <string name="numberTries">Nombre d\'essais restants : </string>
     <string name="accountBlocked">Votre compte est bloqué, veuillez contacter un administrateur.</string>
+    <string name="incorrectSiretNumber">Le numéro de SIRET n\'existe pas dans la base de données nationale.</string>
 </resources>

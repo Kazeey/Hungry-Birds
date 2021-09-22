@@ -1,4 +1,5 @@
 import { connexionSQL } from '../config/mysql.config';
+import fetch from 'node-fetch';
 
 class StructureController {
 
@@ -33,18 +34,36 @@ class StructureController {
     };
 
     create = (req, res, next) => {
-        connexionSQL.query(`INSERT INTO structure SET ?`, req.body, (error, sqlResponse) => {
-            if (error) 
+        connexionSQL.query(`SELECT id_utilisateur FROM utilisateur WHERE mail = '${req.body.mail}'`, (error, sqlResponseSelect) => {
+            if (error)
+                console.log("Error : " + error);
+            else
             {
-                console.log("Error: ", error);
-            } 
-            else 
-            {
-                res.status(201)
-                .send("structure créé avec succès.")
-                .end();
+                let doc = [];
+                if(sqlResponseSelect.length < 1)
+                {
+                    doc[0] = JSON.parse('{"response" : "L\id utilisateur ne peut être trouvé."}');
+                    res.status(200)
+                    .send(doc[0])
+                    .end();
+                }
+                else
+                {
+                    connexionSQL.query(`INSERT INTO structure (id_utilisateur, description, siret) VALUES (${sqlResponseSelect[0].id_utilisateur}, '${req.body.description}', '${req.body.siret}')`, req.body, (error, sqlResponse) => {
+                        if (error) 
+                        {
+                            console.log("Error: ", error);
+                        } 
+                        else 
+                        {
+                            res.status(201)
+                            .send("Structure créé avec succès.")
+                            .end();
+                        }
+                    });
+                }
             }
-        });
+        })        
     };
 
     update = (req, res, next) => {

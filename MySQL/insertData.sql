@@ -11,15 +11,6 @@ VALUES ("Poulain", "Pierre", "pierre.poulain@projet.com", "anakin", 0636353478, 
 INSERT INTO `hungrybirds`.`utilisateur` (`nom`, `prenom`, `mail`, `password`, `telephone`, `adresse`, `ville`, `code_postal`, `role`, `statut`)
 VALUES ("Montbertrant", "Chloé", "chloe.montbertrant@projet.com", "cafeine", 0678956842, "94 rue Nationale", "Boulogne sur mer", 62200, 1, 1); 
 
-INSERT INTO `hungrybirds`.`possede` (`id_utilisateur`, `id_structure`)
-VALUES (1, 1);
-
-INSERT INTO `hungrybirds`.`possede` (`id_utilisateur`, `id_structure`)
-VALUES (3, 2);
-
-INSERT INTO `hungrybirds`.`possede` (`id_utilisateur`, `id_structure`)
-VALUES (4, 3);
-
 INSERT INTO `hungrybirds`.`structure` (`id_structure`, `id_utilisateur`, `description`, `heure_debut`, `heure_fin`, `siret`)
 VALUES ('1', '1', 'Tartes n co', '18:00:00', '19:00:00', '41538449400035');
 

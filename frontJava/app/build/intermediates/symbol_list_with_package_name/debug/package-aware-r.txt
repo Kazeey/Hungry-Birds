@@ -2005,8 +2005,8 @@ id editTextAddress
 id editTextFirstname
 id editTextMail
 id editTextName
+id editTextPassword
 id editTextPhoneNumber
-id editTextPhonePassword
 id editTextSiret
 id editTextStructureName
 id editTextTown
@@ -2265,7 +2265,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textViewMailError
+id textViewRegisterError
 id textViewRegisterPage
 id text_input_end_icon
 id text_input_error_icon
@@ -2528,6 +2528,7 @@ string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string incorrectMailFormat
+string incorrectSiretNumber
 string infoAlreadyUsed
 string inscriptionPageMessage
 string item_view_role_description

@@ -2004,8 +2004,8 @@ int id editTextAddress 0x7f0800b1
 int id editTextFirstname 0x7f0800b2
 int id editTextMail 0x7f0800b3
 int id editTextName 0x7f0800b4
+int id editTextPassword 0x7f0801ea
 int id editTextPhoneNumber 0x7f0800b5
-int id editTextPhonePassword 0x7f0800b6
 int id editTextSiret 0x7f0800b7
 int id editTextStructureName 0x7f0800b8
 int id editTextTown 0x7f0800b9
@@ -2264,7 +2264,7 @@ int id textSpacerNoButtons 0x7f0801b5
 int id textSpacerNoTitle 0x7f0801b6
 int id textStart 0x7f0801b7
 int id textTop 0x7f0801b8
-int id textViewMailError 0x7f0801e9
+int id textViewRegisterError 0x7f0801eb
 int id textViewRegisterPage 0x7f0801b9
 int id text_input_end_icon 0x7f0801ba
 int id text_input_error_icon 0x7f0801bb
@@ -2527,6 +2527,7 @@ int string fab_transformation_sheet_behavior 0x7f0e0033
 int string hide_bottom_view_on_scroll_behavior 0x7f0e0034
 int string icon_content_description 0x7f0e0035
 int string incorrectMailFormat 0x7f0e0087
+int string incorrectSiretNumber 0x7f0e008b
 int string infoAlreadyUsed 0x7f0e008a
 int string inscriptionPageMessage 0x7f0e0036
 int string item_view_role_description 0x7f0e0037

@@ -139,6 +139,9 @@ public class MainActivity extends AppCompatActivity {
                                         cFunctionsClass.setMessage(mSetMessage, getString(R.string.accountBlocked), 0);
                                         return;
                                     }
+
+                                    @Override
+                                    public void onSuccessResponseGet(String result) { }
                                 });
                             }
                         }
@@ -192,6 +195,9 @@ public class MainActivity extends AppCompatActivity {
                             goToGestionUser();
                         }
                     }
+
+                    @Override
+                    public void onSuccessResponseGet(String result) { }
                 });
             }
         }

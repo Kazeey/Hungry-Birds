@@ -19,13 +19,6 @@ CREATE TABLE `utilisateur` (
 PRIMARY KEY (id_utilisateur)
 );
 
-DROP TABLE IF EXISTS possede;
-CREATE TABLE `possede` (
-`id_utilisateur` INT NOT NULL AUTO_INCREMENT,
-`id_structure` INT NOT NULL,
-FOREIGN KEY (`id_utilisateur`) REFERENCES utilisateur(id_utilisateur)
-);
-
 DROP TABLE IF EXISTS notifications;
 CREATE TABLE `notifications` (
 `id_utilisateur` INT NOT NULL AUTO_INCREMENT,
@@ -74,7 +67,6 @@ FOREIGN KEY (`id_utilisateur`) REFERENCES utilisateur(id_utilisateur),
 FOREIGN KEY (`id_favori`) REFERENCES utilisateur(id_utilisateur)
 );
 
-CREATE INDEX id_structure ON possede(id_structure);
 
 DROP TABLE IF EXISTS structure;
 CREATE TABLE `structure` (
@@ -84,7 +76,6 @@ CREATE TABLE `structure` (
 `heure_debut` TIME,
 `heure_fin` TIME,
 `siret` BIGINT NOT NULL,
-FOREIGN KEY (`id_structure`) REFERENCES possede(id_structure),
 PRIMARY KEY (id_structure)
 );
 

@@ -34,11 +34,11 @@ public class RegisterActivity extends AppCompatActivity
     Button mButtonReturn, mButtonRegister;
     ScrollView mStructureScrollView;
     EditText mEditName, mEditFirstname, mEditMail, mEditPassword, mEditPhoneNumber, mEditAddress, mEditTown, mEditPostalCode, mEditStructureName, mEditSiretNumber;
-    TextView mMailError;
+    TextView mRegisterError;
 
     String zStatus, zRole;
 
-    boolean bStructure;
+    boolean bStructure, bIsSiret;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -77,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity
         mEditName = findViewById(R.id.editTextName);
         mEditFirstname = findViewById(R.id.editTextFirstname);
         mEditMail = findViewById(R.id.editTextMail);
-        mEditPassword = findViewById(R.id.editTextPhoneNumber);
+        mEditPassword = findViewById(R.id.editTextPassword);
         mEditPhoneNumber = findViewById(R.id.editTextPhoneNumber);
         mEditAddress = findViewById(R.id.editTextAddress);
         mEditTown = findViewById(R.id.editTextTown);
@@ -114,7 +114,9 @@ public class RegisterActivity extends AppCompatActivity
         mButtonRegister.setOnClickListener(checkRegister);
 
         // Récupération des TextViews
-        mMailError = findViewById(R.id.textViewMailError);
+        mRegisterError = findViewById(R.id.textViewRegisterError);
+
+        bIsSiret = false;
     }
 
     private TextWatcher registerLoginWatcher = new TextWatcher() {
@@ -158,34 +160,75 @@ public class RegisterActivity extends AppCompatActivity
 
     private View.OnClickListener checkRegister = new View.OnClickListener()
     {
-
         @Override
         public void onClick(View view)
         {
-            HashMap<String, String> object = new HashMap<>();
-            object.put("nom",cFunctionsClass.getTextFromInput(mEditName));
-            object.put("prenom",cFunctionsClass.getTextFromInput(mEditFirstname));
-            object.put("mail",cFunctionsClass.getTextFromInput(mEditMail));
-            object.put("password",cFunctionsClass.getTextFromInput(mEditPassword));
-            object.put("telephone",cFunctionsClass.getTextFromInput(mEditPhoneNumber));
-            object.put("adresse",cFunctionsClass.getTextFromInput(mEditAddress));
-            object.put("ville",cFunctionsClass.getTextFromInput(mEditTown));
-            object.put("code_postal",cFunctionsClass.getTextFromInput(mEditPostalCode));
-            object.put("role", zRole);
-            object.put("statut", "1");
+            // Insertion des valeurs dans un Objet JSON
+            HashMap<String, String> objectUser = new HashMap<>();
+            objectUser.put("nom",cFunctionsClass.getTextFromInput(mEditName));
+            objectUser.put("prenom",cFunctionsClass.getTextFromInput(mEditFirstname));
+            objectUser.put("mail",cFunctionsClass.getTextFromInput(mEditMail));
+            objectUser.put("password",cFunctionsClass.getTextFromInput(mEditPassword));
+            objectUser.put("telephone",cFunctionsClass.getTextFromInput(mEditPhoneNumber));
+            objectUser.put("adresse",cFunctionsClass.getTextFromInput(mEditAddress));
+            objectUser.put("ville",cFunctionsClass.getTextFromInput(mEditTown));
+            objectUser.put("code_postal",cFunctionsClass.getTextFromInput(mEditPostalCode));
+            objectUser.put("role", zRole);
+            objectUser.put("statut", "1");
 
-            cRegisterAction.createAccount(mContext, object, new VolleyCallback() {
+            cRegisterAction.createAccount(mContext, objectUser, new VolleyCallback() {
                 @Override
                 public void onSuccessResponse(JSONObject result) throws JSONException {
                     if(result.has("response"))
                     {
-                        cFunctionsClass.setMessage(mMailError, getString(R.string.infoAlreadyUsed), 0);
+                        cFunctionsClass.setMessage(mRegisterError, getString(R.string.infoAlreadyUsed), 0);
                     }
                     else
                     {
-                        cFunctionsClass.setMessage(mMailError, "", 0);
-                        System.out.println(result);
+                        cFunctionsClass.setMessage(mRegisterError, "",0);
+                        if(bStructure)
+                        {
+                            cRegisterAction.checkSiret(mContext, cFunctionsClass.getTextFromInput(mEditSiretNumber), new VolleyCallback() {
+                                @Override
+                                public void onSuccessResponse(JSONObject result) throws JSONException {
+
+                                }
+
+                                @Override
+                                public void onSuccessResponseGet(String result) {
+                                    if (!result.equals(""))
+                                    {
+                                        cFunctionsClass.setMessage(mRegisterError, "", 0);
+                                        HashMap<String, String> objectStructure = new HashMap<>();
+                                        objectStructure.put("mail", cFunctionsClass.getTextFromInput(mEditMail));
+                                        objectStructure.put("description", cFunctionsClass.getTextFromInput(mEditStructureName));
+                                        objectStructure.put("siret", cFunctionsClass.getTextFromInput(mEditSiretNumber));
+
+                                        cRegisterAction.createStructure(mContext, objectStructure, new VolleyCallback() {
+                                            @Override
+                                            public void onSuccessResponse(JSONObject result) throws JSONException {
+                                                System.out.println(result);
+                                            }
+
+                                            @Override
+                                            public void onSuccessResponseGet(String result) {
+
+                                            }
+                                        });
+                                    }
+                                    else
+                                    {
+                                        cFunctionsClass.setMessage(mRegisterError, getString(R.string.incorrectSiretNumber), 0);
+                                    }
+                                }
+                            });
+                        }
                     }
+                }
+
+                @Override
+                public void onSuccessResponseGet(String result) {
+
                 }
             });
         }
