@@ -2,6 +2,8 @@
     <string name="app_name">HungryBirds</string>
     <string name="connexionPageMessage">Page de connexion</string>
     <string name="inscriptionPageMessage">Formulaire d\'inscription</string>
+    <string name="passwordForgotten">Mot de passe oublié</string>
+    <string name="send">Envoyer</string>
     <string name="placeholderName">Nom</string>
     <string name="placeholderFirstname">Prénom</string>
     <string name="placeholderMail">Adresse mail</string>

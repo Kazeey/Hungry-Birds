@@ -75,23 +75,15 @@ public class LoginAction extends AppCompatActivity {
      * This function sends the statut to the back.
      *
      * @param context   Context of the current activity
-     * @param mail      Mail of the user
-     * @param password  Password of the user
-     * @param statut    1 or 0 / 1 => Activated | 0 => Desactivated
+     * @param object    JSON object for the body
      * @param callback  Returns the response in a callback
      */
-    public void changeStatusAccount(Context context, String mail, String password, String statut, VolleyCallback callback)
+    public void changeStatusAccount(Context context, HashMap<String, String> object, VolleyCallback callback)
     {
         RequestQueue queue = Volley.newRequestQueue(context);
         String url = "http://10.0.2.2:3001/login/changeStatutAccount";
 
-        // Creation of the JSON body
-        HashMap<String, String> params = new HashMap<String, String>();
-        params.put("mail", mail);
-        params.put("password", password);
-        params.put("statut", statut);
-        System.out.println(params);
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(params), new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(object), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try
@@ -120,6 +112,41 @@ public class LoginAction extends AppCompatActivity {
 
         queue.add(jsonObjectRequest);
     };
+
+    public void forgotPassword(Context context, HashMap<String, String> object, VolleyCallback callback)
+    {
+        RequestQueue queue = Volley.newRequestQueue(context);
+        String url = "http://10.0.2.2:3001/login/forgetPassword";
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(object), new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try
+                {
+                    callback.onSuccessResponse(response);
+                }
+                catch (JSONException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("Error : ", error.toString());
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError
+            {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+
+        queue.add(jsonObjectRequest);
+    }
 
     /**
      * This function is an exemple of a GET method.

@@ -6,6 +6,8 @@ com/projet/hungrybirds/utils/Functions.java
 com/projet/hungrybirds/actions/LoginAction.java
  com.projet.hungrybirds.actions.LoginAction
  com.projet.hungrybirds.actions.LoginAction$1
+ com.projet.hungrybirds.actions.LoginAction$10
+ com.projet.hungrybirds.actions.LoginAction$11
  com.projet.hungrybirds.actions.LoginAction$2
  com.projet.hungrybirds.actions.LoginAction$3
  com.projet.hungrybirds.actions.LoginAction$4
@@ -13,11 +15,12 @@ com/projet/hungrybirds/actions/LoginAction.java
  com.projet.hungrybirds.actions.LoginAction$6
  com.projet.hungrybirds.actions.LoginAction$7
  com.projet.hungrybirds.actions.LoginAction$8
-com/projet/hungrybirds/interfaces/VolleyCallback.java
- com.projet.hungrybirds.interfaces.VolleyCallback
+ com.projet.hungrybirds.actions.LoginAction$9
 com/projet/hungrybirds/GestionUserActivity.java
  com.projet.hungrybirds.GestionUserActivity
  com.projet.hungrybirds.GestionUserActivity$1
+com/projet/hungrybirds/interfaces/VolleyCallback.java
+ com.projet.hungrybirds.interfaces.VolleyCallback
 com/projet/hungrybirds/actions/RegisterAction.java
  com.projet.hungrybirds.actions.RegisterAction
  com.projet.hungrybirds.actions.RegisterAction$1
@@ -32,6 +35,20 @@ com/projet/hungrybirds/actions/RegisterAction.java
  com.projet.hungrybirds.actions.RegisterAction$7
  com.projet.hungrybirds.actions.RegisterAction$8
  com.projet.hungrybirds.actions.RegisterAction$9
+com/projet/hungrybirds/RegisterActivity.java
+ com.projet.hungrybirds.RegisterActivity
+ com.projet.hungrybirds.RegisterActivity$1
+ com.projet.hungrybirds.RegisterActivity$2
+ com.projet.hungrybirds.RegisterActivity$2$1
+ com.projet.hungrybirds.RegisterActivity$2$1$1
+ com.projet.hungrybirds.RegisterActivity$2$2
+ com.projet.hungrybirds.RegisterActivity$3
+com/projet/hungrybirds/ForgotPasswordActivity.java
+ com.projet.hungrybirds.ForgotPasswordActivity
+ com.projet.hungrybirds.ForgotPasswordActivity$1
+ com.projet.hungrybirds.ForgotPasswordActivity$2
+ com.projet.hungrybirds.ForgotPasswordActivity$2$1
+ com.projet.hungrybirds.ForgotPasswordActivity$3
 com/projet/hungrybirds/MainActivity.java
  com.projet.hungrybirds.MainActivity
  com.projet.hungrybirds.MainActivity$1
@@ -41,11 +58,4 @@ com/projet/hungrybirds/MainActivity.java
  com.projet.hungrybirds.MainActivity$2$1
  com.projet.hungrybirds.MainActivity$2$2
  com.projet.hungrybirds.MainActivity$2$3
-com/projet/hungrybirds/RegisterActivity.java
- com.projet.hungrybirds.RegisterActivity
- com.projet.hungrybirds.RegisterActivity$1
- com.projet.hungrybirds.RegisterActivity$2
- com.projet.hungrybirds.RegisterActivity$2$1
- com.projet.hungrybirds.RegisterActivity$2$1$1
- com.projet.hungrybirds.RegisterActivity$2$2
- com.projet.hungrybirds.RegisterActivity$3
+ com.projet.hungrybirds.MainActivity$3

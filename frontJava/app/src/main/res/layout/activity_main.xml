@@ -69,7 +69,7 @@
         android:id="@+id/editPasswordConnexion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="36dp"
         android:ems="10"
         android:hint="@string/placeholderPassword"
         android:inputType="textPassword"
@@ -91,5 +91,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.784" />
+
+    <TextView
+        android:id="@+id/textViewForgottenPassword"
+        android:layout_width="129dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:minHeight="48dp"
+        android:text="@string/passwordForgotten"
+        app:layout_constraintBottom_toTopOf="@+id/buttonConnexion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPasswordConnexion"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

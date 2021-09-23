@@ -1928,6 +1928,8 @@ id buttonPanel
 id buttonRegister
 id buttonRegisterActivity
 id buttonReturn
+id buttonReturnForgottenPassword
+id buttonSendForgottenPassword
 id cache_measures
 id cancel_button
 id carryVelocity
@@ -2002,6 +2004,7 @@ id editMailConnexion
 id editPasswordConnexion
 id editTestPostalCode
 id editTextAddress
+id editTextEmailForgottenPassword
 id editTextFirstname
 id editTextMail
 id editTextName
@@ -2265,6 +2268,9 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textViewErrorForgottenPassword
+id textViewForgotPassword
+id textViewForgottenPassword
 id textViewRegisterError
 id textViewRegisterPage
 id text_input_end_icon
@@ -2381,6 +2387,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_forgot_password
 layout activity_gestion_user
 layout activity_main
 layout activity_register
@@ -2589,6 +2596,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string numberTries
+string passwordForgotten
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2605,6 +2613,7 @@ string placeholderSiret
 string placeholderStructureName
 string placeholderTown
 string search_menu_title
+string send
 string setMessage
 string siretAlreadyUsed
 string statusSavedKey

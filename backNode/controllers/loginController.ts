@@ -49,7 +49,7 @@ class LoginController {
             else
             {
                 let doc = [];
-                doc[0] = JSON.parse('{"response" : "S\'il exite un compte rattaché à cette adresse mail, le mot de passe a été modifié."}');
+                doc[0] = JSON.parse('{"result" : "S\'il exite un compte rattaché à cette adresse mail, le mot de passe a été modifié."}');
 
                 if (sqlResponse[0] == null)
                 {

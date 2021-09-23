@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     // Instanciation des variables liées aux composants
     EditText mEditMail, mEditPassword;
     Button mButtonConnexion, mButtonRegister, mButtonNoRegister;
-    TextView mSetMessage;
+    TextView mSetMessage, mForgottenPassword;
 
     // Récupération du context
     private Context mContext = this;
@@ -61,13 +61,16 @@ public class MainActivity extends AppCompatActivity {
         mButtonRegister = (Button)findViewById(R.id.buttonRegister);
         mButtonNoRegister = (Button)findViewById(R.id.buttonNoRegister);
 
+        // Récupération du texte servant à l'affichage du message
+        mSetMessage = (TextView) findViewById(R.id.setMessage);
+        mForgottenPassword = (TextView) findViewById(R.id.textViewForgottenPassword);
+
         // Instanciation des onClicks
         mButtonConnexion.setOnClickListener(checkLogin);
         mButtonRegister.setOnClickListener(goToRegister);
+        mForgottenPassword.setOnClickListener(forgotPassword);
         //mButtonNoRegister.setOnClickListener();
 
-        // Récupération du texte servant à l'affichage du message
-        mSetMessage = (TextView) findViewById(R.id.setMessage);
 
         // Instanciation du nombre d'essais pour une combinaison mail / password erronée
         nbEssais = 5;
@@ -131,7 +134,14 @@ public class MainActivity extends AppCompatActivity {
                             else // Sinon l'utilisateur n'a plus d'essais
                             {
                                 String status = "0";
-                                cLoginAction.changeStatusAccount(mContext, zMail, zPassword, status, new VolleyCallback() {
+
+                                // Creation of the JSON body
+                                HashMap<String, String> object = new HashMap<String, String>();
+                                object.put("mail", zMail);
+                                object.put("password", zPassword);
+                                object.put("statut", status);
+
+                                cLoginAction.changeStatusAccount(mContext, object, new VolleyCallback() {
                                     @Override
                                     public void onSuccessResponse(JSONObject result) throws JSONException {
                                         System.out.println(result);
@@ -244,6 +254,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(mContext, GestionUserActivity.class);
         startActivity(intent);
     }
+
+    private View.OnClickListener forgotPassword = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(mContext, ForgotPasswordActivity.class);
+            startActivity(intent);
+        }
+    };
 
     //TODO : Décommenter la function
     /*

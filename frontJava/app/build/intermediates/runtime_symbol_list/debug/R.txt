@@ -1927,6 +1927,8 @@ int id buttonPanel 0x7f080064
 int id buttonRegister 0x7f080065
 int id buttonRegisterActivity 0x7f080066
 int id buttonReturn 0x7f080067
+int id buttonReturnForgottenPassword 0x7f0801ea
+int id buttonSendForgottenPassword 0x7f0801eb
 int id cache_measures 0x7f080068
 int id cancel_button 0x7f080069
 int id carryVelocity 0x7f08006a
@@ -2001,6 +2003,7 @@ int id editMailConnexion 0x7f0800ae
 int id editPasswordConnexion 0x7f0800af
 int id editTestPostalCode 0x7f0800b0
 int id editTextAddress 0x7f0800b1
+int id editTextEmailForgottenPassword 0x7f0801ec
 int id editTextFirstname 0x7f0800b2
 int id editTextMail 0x7f0800b3
 int id editTextName 0x7f0800b4
@@ -2264,6 +2267,9 @@ int id textSpacerNoButtons 0x7f0801b5
 int id textSpacerNoTitle 0x7f0801b6
 int id textStart 0x7f0801b7
 int id textTop 0x7f0801b8
+int id textViewErrorForgottenPassword 0x7f0801ed
+int id textViewForgotPassword 0x7f0801ee
+int id textViewForgottenPassword 0x7f0801ef
 int id textViewRegisterError 0x7f0801b9
 int id textViewRegisterPage 0x7f0801ba
 int id text_input_end_icon 0x7f0801bb
@@ -2380,6 +2386,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0b0018
 int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
+int layout activity_forgot_password 0x7f0b0073
 int layout activity_gestion_user 0x7f0b001c
 int layout activity_main 0x7f0b001d
 int layout activity_register 0x7f0b001e
@@ -2588,6 +2595,7 @@ int string mtrl_picker_toggle_to_day_selection 0x7f0e0071
 int string mtrl_picker_toggle_to_text_input_mode 0x7f0e0072
 int string mtrl_picker_toggle_to_year_selection 0x7f0e0073
 int string numberTries 0x7f0e0074
+int string passwordForgotten 0x7f0e008d
 int string password_toggle_content_description 0x7f0e0075
 int string path_password_eye 0x7f0e0076
 int string path_password_eye_mask_strike_through 0x7f0e0077
@@ -2604,6 +2612,7 @@ int string placeholderSiret 0x7f0e0081
 int string placeholderStructureName 0x7f0e0082
 int string placeholderTown 0x7f0e0083
 int string search_menu_title 0x7f0e0084
+int string send 0x7f0e008e
 int string setMessage 0x7f0e0085
 int string siretAlreadyUsed 0x7f0e008c
 int string statusSavedKey 0x7f0e0086
