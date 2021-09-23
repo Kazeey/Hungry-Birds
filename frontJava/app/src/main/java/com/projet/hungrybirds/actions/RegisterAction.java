@@ -31,9 +31,12 @@ public class RegisterAction {
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(object), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try {
+                try
+                {
                     callback.onSuccessResponse(response);
-                } catch (JSONException e) {
+                }
+                catch (JSONException e)
+                {
                     e.printStackTrace();
                 }
             }
@@ -61,9 +64,12 @@ public class RegisterAction {
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(object), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try {
+                try
+                {
                     callback.onSuccessResponse(response);
-                } catch (JSONException e) {
+                }
+                catch (JSONException e)
+                {
                     e.printStackTrace();
                 }
             }
@@ -115,5 +121,38 @@ public class RegisterAction {
         };
 
         queue.add(stringRequest);
+    }
+
+    public void createUserAndStructure(Context context, HashMap<String, HashMap> object, VolleyCallback callback)
+    {
+        RequestQueue queue = Volley.newRequestQueue(context);
+        String url = "http://10.0.2.2:3001/structures/userandstructure";
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(object), new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try
+                {
+                    callback.onSuccessResponse(response);
+                }
+                catch (JSONException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {}
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError
+            {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+
+        queue.add(jsonObjectRequest);
     }
 }

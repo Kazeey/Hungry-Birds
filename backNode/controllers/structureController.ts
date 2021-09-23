@@ -34,36 +34,54 @@ class StructureController {
     };
 
     create = (req, res, next) => {
-        connexionSQL.query(`SELECT id_utilisateur FROM utilisateur WHERE mail = '${req.body.mail}'`, (error, sqlResponseSelect) => {
-            if (error)
+        connexionSQL.query(`SELECT * FROM structure WHERE siret = '${req.body.siret}'`, (error, sqlResponseSelectStructure) => {
+            if(error)
                 console.log("Error : " + error);
             else
             {
                 let doc = [];
-                if(sqlResponseSelect.length < 1)
+                if (sqlResponseSelectStructure.length > 0)
                 {
-                    doc[0] = JSON.parse('{"response" : "L\id utilisateur ne peut être trouvé."}');
+                    doc[0] = JSON.parse('{"response" : "La strcture existe déjà."}');
                     res.status(200)
                     .send(doc[0])
                     .end();
                 }
                 else
                 {
-                    connexionSQL.query(`INSERT INTO structure (id_utilisateur, description, siret) VALUES (${sqlResponseSelect[0].id_utilisateur}, '${req.body.description}', '${req.body.siret}')`, req.body, (error, sqlResponse) => {
-                        if (error) 
+                    connexionSQL.query(`SELECT id_utilisateur FROM utilisateur WHERE mail = '${req.body.mail}'`, (error, sqlResponseSelect) => {
+                    if (error)
+                        console.log("Error : " + error);
+                    else
+                    {
+                        if(sqlResponseSelect.length < 1)
                         {
-                            console.log("Error: ", error);
-                        } 
-                        else 
-                        {
-                            res.status(201)
-                            .send("Structure créé avec succès.")
+                            doc[0] = JSON.parse('{"response" : "L\id utilisateur ne peut être trouvé."}');
+                            res.status(200)
+                            .send(doc[0])
                             .end();
                         }
-                    });
+                        else
+                        {
+                            connexionSQL.query(`INSERT INTO structure (id_utilisateur, description, siret) VALUES (${sqlResponseSelect[0].id_utilisateur}, '${req.body.description}', '${req.body.siret}')`, req.body, (error, sqlResponse) => {
+                            if (error) 
+                            {
+                                console.log("Error: ", error);
+                            } 
+                            else 
+                            {
+                                doc[0] = JSON.parse('{"result" : "Structure créé."}');
+                                res.status(201)
+                                .send(doc[0])
+                                .end();
+                            }
+                            });
+                        }
+                    }
+                })        
                 }
             }
-        })        
+        });        
     };
 
     update = (req, res, next) => {
@@ -95,6 +113,81 @@ class StructureController {
             }
         });
     };
+
+    createUserAndStructure = (req, res, next) => {
+        let objectStructure, siret;
+        let objectUser = req.body.objectUser;
+        let mail = objectUser.mail;
+        let phone = objectUser.telephone;
+
+        if(req.body.objectStructure)
+        {
+            objectStructure = req.body.objectStructure;
+            siret = objectStructure.siret;
+        }
+
+        connexionSQL.query(`SELECT * FROM utilisateur WHERE mail = '${mail}' OR telephone='${phone}'`, (error, sqlReponseSelectUser) => {
+            if (error)
+                console.log("Error : " + error);
+            else
+            {
+                let doc = [];
+                if (sqlReponseSelectUser.length > 0)
+                {
+                    doc[0] = JSON.parse('{"response" : "L\'adresse mail et/ou le numéro de téléphone sont déjà utilisés."}');
+                    res.status(200)
+                    .send(doc[0])
+                    .end();
+                }
+                else
+                {
+                    connexionSQL.query(`SELECT * FROM structure WHERE siret = '${siret}'`, (error, sqlReponseSelectSiret) => {
+                        if (error)
+                            console.log("Error : " + error);
+                        else
+                        {
+                            if (sqlReponseSelectSiret.length > 0)
+                            {
+                                doc[0] = JSON.parse('{"response" : "La strcture existe déjà."}');
+                                res.status(200)
+                                .send(doc[0])
+                                .end();
+                            }
+                            else
+                            {
+                                connexionSQL.query(`INSERT INTO utilisateur SET ?`, objectUser, (error, sqlResponseInsert) => {
+                                    if (error)
+                                        console.log("Error : " + error);
+                                    else
+                                    {
+                                        connexionSQL.query(`SELECT * FROM utilisateur WHERE mail = '${mail}'`, (error, sqlReponseSelectUser) => {
+                                            if (error)
+                                                console.log("Error : " + error);
+                                            else
+                                            {
+                                                connexionSQL.query(`INSERT INTO structure (id_utilisateur, description, siret) VALUES (${sqlReponseSelectUser[0].id_utilisateur}, '${objectStructure.description}', '${siret}')`, (error, sqlResponse) => {
+                                                    if (error)
+                                                        console.log("Error : " + error);
+                                                    else
+                                                    {
+                                                        doc[0] = JSON.parse('{"result" : "Le compte utilisateur ainsi que la structure ont été créés."}');
+                                                        res.status(200)
+                                                        .send(doc[0])
+                                                        .end();
+                                                    }
+                                                })
+                                            }
+                                        })
+                                    }
+                                })
+                            }
+                        }
+                    })
+                }
+            }
+        })
+        
+    }
 
 }
 

@@ -17,6 +17,8 @@ import com.projet.hungrybirds.RegisterActivity;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Functions {
 
@@ -110,5 +112,17 @@ public class Functions {
         // TODO : Rediriger vers une activité tampon pour dire que la session est terminée
         Intent intent = new Intent(context, MainActivity.class);
         context.startActivity(intent);
+    }
+
+    public void redirectAfterTime(Context context, int timeout)
+    {
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(context, MainActivity.class);
+                context.startActivity(intent);
+            }
+        }, timeout);
     }
 }

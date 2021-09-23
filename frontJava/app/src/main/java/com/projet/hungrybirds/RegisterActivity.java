@@ -176,61 +176,71 @@ public class RegisterActivity extends AppCompatActivity
             objectUser.put("role", zRole);
             objectUser.put("statut", "1");
 
-            cRegisterAction.createAccount(mContext, objectUser, new VolleyCallback() {
-                @Override
-                public void onSuccessResponse(JSONObject result) throws JSONException {
-                    if(result.has("response"))
-                    {
-                        cFunctionsClass.setMessage(mRegisterError, getString(R.string.infoAlreadyUsed), 0);
-                    }
-                    else
-                    {
-                        cFunctionsClass.setMessage(mRegisterError, "",0);
-                        if(bStructure)
+            HashMap<String, HashMap> objectBody = new HashMap<>();
+            objectBody.put("objectUser", objectUser);
+
+            if (bStructure) {
+                HashMap<String, String> objectStructure = new HashMap<>();
+                objectStructure.put("mail", cFunctionsClass.getTextFromInput(mEditMail));
+                objectStructure.put("description", cFunctionsClass.getTextFromInput(mEditStructureName));
+                objectStructure.put("siret", cFunctionsClass.getTextFromInput(mEditSiretNumber));
+                objectBody.put("objectStructure", objectStructure);
+
+                cRegisterAction.checkSiret(mContext, objectStructure.get("siret").toString(), new VolleyCallback() {
+                    @Override
+                    public void onSuccessResponse(JSONObject result) throws JSONException {}
+
+                    @Override
+                    public void onSuccessResponseGet(String result) {
+                        if(!result.equals(""))
                         {
-                            cRegisterAction.checkSiret(mContext, cFunctionsClass.getTextFromInput(mEditSiretNumber), new VolleyCallback() {
+                            cFunctionsClass.setMessage(mRegisterError, "", 0);
+                            cRegisterAction.createUserAndStructure(mContext, objectBody, new VolleyCallback() {
                                 @Override
                                 public void onSuccessResponse(JSONObject result) throws JSONException {
-
-                                }
-
-                                @Override
-                                public void onSuccessResponseGet(String result) {
-                                    if (!result.equals(""))
+                                    if (result.has("response"))
                                     {
-                                        cFunctionsClass.setMessage(mRegisterError, "", 0);
-                                        HashMap<String, String> objectStructure = new HashMap<>();
-                                        objectStructure.put("mail", cFunctionsClass.getTextFromInput(mEditMail));
-                                        objectStructure.put("description", cFunctionsClass.getTextFromInput(mEditStructureName));
-                                        objectStructure.put("siret", cFunctionsClass.getTextFromInput(mEditSiretNumber));
-
-                                        cRegisterAction.createStructure(mContext, objectStructure, new VolleyCallback() {
-                                            @Override
-                                            public void onSuccessResponse(JSONObject result) throws JSONException {
-                                                System.out.println(result);
-                                            }
-
-                                            @Override
-                                            public void onSuccessResponseGet(String result) {
-
-                                            }
-                                        });
+                                        cFunctionsClass.setMessage(mRegisterError, result.getString("response"), 0);
                                     }
                                     else
                                     {
-                                        cFunctionsClass.setMessage(mRegisterError, getString(R.string.incorrectSiretNumber), 0);
+                                        System.out.println("Created at first : " + result);
+                                        cFunctionsClass.setMessage(mRegisterError, getString(R.string.accountCreated), 0);
+                                        cFunctionsClass.redirectAfterTime(mContext, 3000);
                                     }
                                 }
+
+                                @Override
+                                public void onSuccessResponseGet(String result) {}
                             });
                         }
+                        else
+                        {
+                            cFunctionsClass.setMessage(mRegisterError, getString(R.string.incorrectSiretNumber), 0);
+                        }
                     }
-                }
+                });
+            }
+            else
+            {
+                cRegisterAction.createAccount(mContext, objectUser, new VolleyCallback() {
+                    @Override
+                    public void onSuccessResponse(JSONObject result) throws JSONException {
+                        if (result.has("response"))
+                        {
+                            cFunctionsClass.setMessage(mRegisterError, result.getString("response"), 0);
+                        }
+                        else
+                        {
+                            cFunctionsClass.setMessage(mRegisterError, getString(R.string.accountCreated), 0);
+                            cFunctionsClass.redirectAfterTime(mContext, 3000);
+                        }
+                    }
 
-                @Override
-                public void onSuccessResponseGet(String result) {
-
-                }
-            });
+                    @Override
+                    public void onSuccessResponseGet(String result) {}
+                });
+            }
         }
     };
 

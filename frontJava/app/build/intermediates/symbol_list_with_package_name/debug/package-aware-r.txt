@@ -2499,6 +2499,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string accountBlocked
+string accountCreated
 string app_name
 string appbar_scrolling_view_behavior
 string association
@@ -2605,6 +2606,7 @@ string placeholderStructureName
 string placeholderTown
 string search_menu_title
 string setMessage
+string siretAlreadyUsed
 string statusSavedKey
 string status_bar_notification_info_overflow
 string timeDestructionSavedKey

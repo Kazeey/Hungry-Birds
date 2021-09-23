@@ -10,6 +10,7 @@ export const setstructureRouting = (app) => {
     app.get(`/${endpoint}`, structureController.findAll);
     app.get(`/${endpoint}/:id`, structureController.findById);
     app.post(`/${endpoint}`, jsonParser, structureController.create);
+    app.post(`/${endpoint}/userandstructure`, jsonParser, structureController.createUserAndStructure);
     app.patch(`/${endpoint}/:id`, jsonParser, structureController.update);
     app.delete(`/${endpoint}/:id`, structureController.delete);
 }
