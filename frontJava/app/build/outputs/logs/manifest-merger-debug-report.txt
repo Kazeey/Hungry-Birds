@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Quentin Cardon\.gradle\caches\transforms-2\files-2.1\71ac2587cc63fa4d64522c38d27e12e2\core-ktx-1.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Quentin Cardon\.gradle\caches\transforms-2\files-2.1\991eaf2b6472a37f0a174897411ac727\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Quentin Cardon\.gradle\caches\transforms-2\files-2.1\fb986537d4803cedbaf006bf177504dd\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
@@ -40,25 +40,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Quentin Cardon\.
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Quentin Cardon\.gradle\caches\transforms-2\files-2.1\476d58516881ec5d55af756c0f0e09f1\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Quentin Cardon\.gradle\caches\transforms-2\files-2.1\f7e00a89488f4ca08e0520c00dd0334a\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Quentin Cardon\.gradle\caches\transforms-2\files-2.1\7aad86a58ff5bbc0ee7ab1fb6b33fbac\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:5:5-22:19
+ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Quentin Cardon\.gradle\caches\transforms-2\files-2.1\991eaf2b6472a37f0a174897411ac727\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Quentin Cardon\.gradle\caches\transforms-2\files-2.1\991eaf2b6472a37f0a174897411ac727\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Quentin Cardon\.gradle\caches\transforms-2\files-2.1\fb986537d4803cedbaf006bf177504dd\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -85,24 +85,32 @@ activity#com.example.hungrybirds.NotConnectedActivity
 ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:12:9-67
 	android:name
 		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:12:19-55
+activity#com.example.hungrybirds.ContactFormActivity
+ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:9-66
+	android:name
+		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:19-54
+activity#com.example.hungrybirds.WwaActivity
+ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:14:9-58
+	android:name
+		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:14:19-46
 activity#com.example.hungrybirds.SplashActivity
-ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:9-20:20
+ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:15:9-22:20
 	android:name
-		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:19-49
+		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:15:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:15:9-19:29
+ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:17:9-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:20:27-74
 activity#com.example.hungrybirds.MainActivity
-ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:21:9-59
+ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:9-59
 	android:name
-		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:21:19-47
+		ADDED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:19-47
 uses-sdk
 INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml

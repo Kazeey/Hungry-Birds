@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HungryBirds">
         <activity android:name=".NotConnectedActivity"></activity>
+        <activity android:name=".ContactFormActivity"></activity>
+        <activity android:name=".WwaActivity"></activity>
         <activity android:name=".SplashActivity">
 
         <intent-filter>

@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Quentin Cardon/Documents/GitHub/Hungry-Birds/frontJava/app/src/main/res/layout/activity_contact_form.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/Quentin Cardon/Documents/GitHub/Hungry-Birds/frontJava/app/src/main/res/layout/activity_main.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/Quentin Cardon/Documents/GitHub/Hungry-Birds/frontJava/app/src/main/res/layout/activity_not_connected.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/Quentin Cardon/Documents/GitHub/Hungry-Birds/frontJava/app/src/main/res/layout/activity_splash.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/Quentin Cardon/Documents/GitHub/Hungry-Birds/frontJava/app/src/main/res/layout/activity_wwa.xml" value="0.3619791666666667" />
       </map>
     </option>
   </component>

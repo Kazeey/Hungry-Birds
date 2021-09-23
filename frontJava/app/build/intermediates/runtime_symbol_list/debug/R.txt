@@ -1830,10 +1830,11 @@ int id beginning 0x7f080054
 int id blocking 0x7f080055
 int id bottom 0x7f080056
 int id bounce 0x7f080057
+int id buttonClose 0x7f0801b0
 int id buttonPanel 0x7f080059
-int id button_1 0x7f08005a
-int id button_2 0x7f08005b
 int id button_3 0x7f08005c
+int id button_form 0x7f0801b7
+int id button_wwa 0x7f0801b1
 int id cache_measures 0x7f08005d
 int id cancel_button 0x7f08005e
 int id center 0x7f08005f
@@ -1936,7 +1937,11 @@ int id ifRoom 0x7f0800bf
 int id ignore 0x7f0800c0
 int id ignoreRequest 0x7f0800c1
 int id image 0x7f0800c2
+int id imageButton_flecheD 0x7f0801b2
+int id imageButton_flecheG 0x7f0801b3
 int id imageView 0x7f0800c3
+int id imageView2 0x7f0801b4
+int id imageView3 0x7f0801b8
 int id info 0x7f0800c4
 int id invisible 0x7f0800c5
 int id inward 0x7f0800c6
@@ -1951,6 +1956,7 @@ int id leftToRight 0x7f0800ce
 int id line1 0x7f0800cf
 int id line3 0x7f0800d0
 int id linear 0x7f0800d1
+int id linearLayout 0x7f0801b5
 int id listMode 0x7f0800d2
 int id list_item 0x7f0800d3
 int id masked 0x7f0800d4
@@ -2037,7 +2043,7 @@ int id percent 0x7f080124
 int id pin 0x7f080125
 int id position 0x7f080126
 int id postLayout 0x7f080127
-int id progressBar2 0x7f080128
+int id progressBar13 0x7f0801ba
 int id progress_circular 0x7f080129
 int id progress_horizontal 0x7f08012a
 int id radio 0x7f08012b
@@ -2131,7 +2137,9 @@ int id textSpacerNoTitle 0x7f080182
 int id textStart 0x7f080183
 int id textTop 0x7f080184
 int id textView 0x7f080185
+int id textView13 0x7f0801bb
 int id textView_1 0x7f080186
+int id textView_texte 0x7f0801b6
 int id text_input_end_icon 0x7f080187
 int id text_input_error_icon 0x7f080188
 int id text_input_start_icon 0x7f080189
@@ -2244,6 +2252,7 @@ int layout activity_contact_form 0x7f0b001c
 int layout activity_main 0x7f0b001d
 int layout activity_not_connected 0x7f0b001e
 int layout activity_splash 0x7f0b001f
+int layout activity_wwa 0x7f0b0074
 int layout custom_dialog 0x7f0b0020
 int layout design_bottom_navigation_item 0x7f0b0021
 int layout design_bottom_sheet_dialog 0x7f0b0022
@@ -2331,6 +2340,10 @@ int layout text_view_without_line_height 0x7f0b0073
 int mipmap ic_launcher 0x7f0c0000
 int mipmap ic_launcher_round 0x7f0c0001
 int plurals mtrl_badge_content_description 0x7f0d0000
+int string Brassage 0x7f0e0069
+int string Empatage 0x7f0e006a
+int string Filtrer 0x7f0e006c
+int string Prealable 0x7f0e006f
 int string abc_action_bar_home_description 0x7f0e0000
 int string abc_action_bar_up_description 0x7f0e0001
 int string abc_action_menu_overflow_description 0x7f0e0002

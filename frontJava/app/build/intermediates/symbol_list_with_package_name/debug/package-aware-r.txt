@@ -1831,10 +1831,11 @@ id beginning
 id blocking
 id bottom
 id bounce
+id buttonClose
 id buttonPanel
-id button_1
-id button_2
 id button_3
+id button_form
+id button_wwa
 id cache_measures
 id cancel_button
 id center
@@ -1937,7 +1938,11 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageButton_flecheD
+id imageButton_flecheG
 id imageView
+id imageView2
+id imageView3
 id info
 id invisible
 id inward
@@ -1952,6 +1957,7 @@ id leftToRight
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id masked
@@ -2038,7 +2044,7 @@ id percent
 id pin
 id position
 id postLayout
-id progressBar2
+id progressBar13
 id progress_circular
 id progress_horizontal
 id radio
@@ -2132,7 +2138,9 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView13
 id textView_1
+id textView_texte
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2245,6 +2253,7 @@ layout activity_contact_form
 layout activity_main
 layout activity_not_connected
 layout activity_splash
+layout activity_wwa
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2332,6 +2341,10 @@ layout text_view_without_line_height
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string Brassage
+string Empatage
+string Filtrer
+string Prealable
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

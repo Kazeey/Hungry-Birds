@@ -11,7 +11,7 @@
 9-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:5:5-22:19
+11-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:5:5-24:19
 12        android:allowBackup="true"
 12-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -32,23 +32,29 @@
 22        <activity android:name="com.example.hungrybirds.NotConnectedActivity" />
 22-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:12:9-67
 22-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:12:19-55
-23        <activity android:name="com.example.hungrybirds.SplashActivity" >
-23-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:9-20:20
-23-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:19-49
-24            <intent-filter>
-24-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:15:9-19:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:16:17-69
-25-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:16:25-66
-26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:17-77
-27-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:27-74
-28            </intent-filter>
-29        </activity>
-30        <activity android:name="com.example.hungrybirds.MainActivity" />
-30-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:21:9-59
-30-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:21:19-47
-31    </application>
-32
-33</manifest>
+23        <activity android:name="com.example.hungrybirds.ContactFormActivity" />
+23-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:9-66
+23-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:13:19-54
+24        <activity android:name="com.example.hungrybirds.WwaActivity" />
+24-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:14:9-58
+24-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:14:19-46
+25        <activity android:name="com.example.hungrybirds.SplashActivity" >
+25-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:15:9-22:20
+25-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:15:19-49
+26            <intent-filter>
+26-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:17:9-21:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:17-69
+27-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:18:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:20:17-77
+29-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:20:27-74
+30            </intent-filter>
+31        </activity>
+32        <activity android:name="com.example.hungrybirds.MainActivity" />
+32-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:9-59
+32-->C:\Users\Quentin Cardon\Documents\GitHub\Hungry-Birds\frontJava\app\src\main\AndroidManifest.xml:23:19-47
+33    </application>
+34
+35</manifest>

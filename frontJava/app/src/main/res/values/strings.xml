@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">HungryBirds</string>
+
+    <string name="Prealable">SAUVEZ DE DÉLICIEUX INVENDUS \n\n
+        Nous rêvons d\'un monde sans gaspillage alimentaire.
+        Chaque jour, nous travaillons à faire de ce rêve une réalité.
+        Notre application vous permet facilement de nous y aider ! Comment ? Rien de plus simple :
+        téléchargez l\'application, connectez-vous sur votre smartphone et sauvez de délicieux invendus alimentaires chez vos commerçants locaux.
+        Les paniers sont toujours surprises, à un prix avantageux et ils font du bien à la planète.
+        Alors, qu\'attendez-vous pour essayer ?
+    </string>
+
+    <string name="Empatage">NOTRE AMBITION \n\n
+        Notre mission est d\'inspirer et de donner le pouvoir à chacun de lutter contre le gaspillage alimentaire.
+        Pour faire de l\'anti-gaspi une réalité de chaque instant, il faut passer des paroles aux actes !
+        C\'est dans ce but que s\'inscrit notre nouvelle initiative : contribuer autant que possible à la création d\'un mouvement global de lutte contre le gaspillage alimentaire.
+        Ce n\'est qu\'en rassemblant nos forces et en agissant ensemble contre le gaspillage alimentaire que l\'on parviendra à générer un changement positif.
+ </string>
+
+    <string name="Brassage">AVOIR DE L\'IMPACT, ENSEMBLE \n\n
+        Le gaspillage alimentaire est un problème important et complexe qui est présent dans le monde entier.
+        Nous faisons le maximum pour avoir de l\'impact à notre niveau.
+        Mais il existe une vérité : lorsqu\'une idée résonne auprès d\'une personne, puis de dizaines, centaines et finalement de millions, vous pouvez créer un véritable mouvement.
+        C\'est cette énergie qui nous pousse à rendre concrète notre mission d\'entreprise : inspirer et donner les clés à tous de lutter contre le gaspillage alimentaire, ensemble.
+ </string>
+
+    <string name="Filtrer">1/3 DE LA NOURRITURE PRODUITE EST GASPILLÉE ! \n\n
+        - 9,9 millions d\'utilisateurs en France sauvent déjà des paniers. \n\n
+        - 22 387 cafés, restaurants, supermarchés, boulangers, hôtels (et bien plus encore !) participent à ce sauvetage. \n\n
+        - 29 millions de repas sauvés !
+ </string>
+
+
 </resources>

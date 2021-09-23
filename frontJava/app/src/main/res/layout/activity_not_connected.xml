@@ -34,25 +34,25 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button_1"
+            android:id="@+id/button_wwa"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="ETAPE DE FABRICATION" />
+            android:text="Qui sommes-nous ?" />
 
         <Button
-            android:id="@+id/button_2"
+            android:id="@+id/button_form"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="OUTILS DE FABRICATION" />
+            android:text="CONTACTEZ-NOUS" />
 
         <Button
             android:id="@+id/button_3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="VOS RECETTES" />
+            android:text="Connexion" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
