@@ -138,6 +138,12 @@ public class RegisterActivity extends AppCompatActivity
             zTownInput = mEditTown.getText().toString().trim();
             zPostalCodeInput = mEditPostalCode.getText().toString().trim();
 
+            boolean bIsMail = cFunctionsClass.checkMail(zMailInput);
+            if (!bIsMail)
+                cFunctionsClass.setMessage(mRegisterError, getString(R.string.incorrectMailFormat), 0);
+            else
+                cFunctionsClass.setMessage(mRegisterError, "", 0);
+
             if(bStructure)
             {
                 zStructureNameInput = mEditStructureName.getText().toString().trim();
@@ -145,13 +151,13 @@ public class RegisterActivity extends AppCompatActivity
 
                 mButtonRegister.setEnabled(!zNameInput.isEmpty() && !zFirstnameInput.isEmpty() && !zMailInput.isEmpty() && !zPasswordInput.isEmpty() &&
                         !zPhoneNumberInput.isEmpty() && !zAddressInput.isEmpty() && !zTownInput.isEmpty() &&
-                        !zPostalCodeInput.isEmpty() && !zStructureNameInput.isEmpty() && !zSiretNumberInput.isEmpty());
+                        !zPostalCodeInput.isEmpty() && !zStructureNameInput.isEmpty() && !zSiretNumberInput.isEmpty() && bIsMail);
             }
             else
             {
                 mButtonRegister.setEnabled(!zNameInput.isEmpty() && !zFirstnameInput.isEmpty() && !zMailInput.isEmpty() && !zPasswordInput.isEmpty() &&
                         !zPhoneNumberInput.isEmpty() && !zAddressInput.isEmpty() && !zTownInput.isEmpty() &&
-                        !zPostalCodeInput.isEmpty());
+                        !zPostalCodeInput.isEmpty() && bIsMail);
             }
         }
 

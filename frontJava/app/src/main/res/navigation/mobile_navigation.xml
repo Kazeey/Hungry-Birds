@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.projet.hungrybirds.HomeActivity"
+        android:label="@string/title_home"
+        tools:layout="@layout/activity_home" />
+
+    <fragment
+        android:id="@+id/navigation_gestion"
+        android:name="com.projet.hungrybirds.GestionAccountsActivity"
+        android:label="@string/title_user"
+        tools:layout="@layout/activity_list_accounts" />
+
+    <fragment
+        android:id="@+id/navigation_disconnect"
+        android:name="com.projet.hungrybirds.MainActivity"
+        android:label="@string/title_disconnect"
+        tools:layout="@layout/activity_main"/>
+</navigation>

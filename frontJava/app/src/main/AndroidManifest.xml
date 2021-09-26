@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.projet.hungrybirds"
-    tools:ignore="ExtraText" >
+    tools:ignore="ExtraText">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,7 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HungryBirds"
         android:usesCleartextTraffic="true"
-        tools:targetApi="n" >
+        tools:targetApi="n">
+        <activity
+            android:name=".GestionStructureActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".GestionAccountsActivity"
+            android:exported="true" />
         <activity
             android:name=".ForgotPasswordActivity"
             android:exported="true" />
@@ -28,7 +37,7 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

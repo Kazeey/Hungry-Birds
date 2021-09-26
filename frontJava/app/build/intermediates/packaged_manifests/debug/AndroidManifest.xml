@@ -22,6 +22,15 @@
         android:theme="@style/Theme.HungryBirds"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.projet.hungrybirds.GestionStructureActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.projet.hungrybirds.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.projet.hungrybirds.GestionAccountsActivity"
+            android:exported="true" />
+        <activity
             android:name="com.projet.hungrybirds.ForgotPasswordActivity"
             android:exported="true" />
         <activity

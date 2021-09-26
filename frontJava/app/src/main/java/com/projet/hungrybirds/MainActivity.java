@@ -70,8 +70,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonConnexion.setOnClickListener(checkLogin);
         mButtonRegister.setOnClickListener(goToRegister);
         mForgottenPassword.setOnClickListener(forgotPassword);
-        //mButtonNoRegister.setOnClickListener();
-
+        mButtonNoRegister.setOnClickListener(goToHome);
 
         // Instanciation du nombre d'essais pour une combinaison mail / password erronée
         nbEssais = 5;
@@ -209,7 +208,8 @@ public class MainActivity extends AppCompatActivity {
                             editor.putString(getString(R.string.statusSavedKey), zStatus);
                             editor.apply();
 
-                            goToGestionUser();
+                            Intent intent = new Intent(mContext, HomeActivity.class);
+                            startActivity(intent);
                         }
                     }
 
@@ -261,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToGestionUser()
     {
-        Intent intent = new Intent(mContext, GestionUserActivity.class);
+        Intent intent = new Intent(mContext, GestionAccountsActivity.class);
         startActivity(intent);
     }
 
@@ -273,16 +273,13 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    //TODO : Décommenter la function
-    /*
-    private View.OnClickListener goToGestionUser = new View.OnClickListener()
-    {
+    private View.OnClickListener goToHome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(mContext, GestionUserActivity.class);
+            Intent intent = new Intent(mContext, HomeActivity.class);
             startActivity(intent);
         }
     };
-     */
+
 
 }

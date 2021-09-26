@@ -50,9 +50,7 @@ class UtilisateurController {
                 {
                     connexionSQL.query(`INSERT INTO utilisateur SET ?`, req.body, (error, sqlResponseInsert) => {
                     if (error) 
-                    {
                         console.log("Error: ", error);
-                    } 
                     else 
                     {
                         doc[0] = JSON.parse('{"result" : "Utilisateur créé."}');
@@ -68,15 +66,13 @@ class UtilisateurController {
     };
 
     update = (req, res, next) => {
-        connexionSQL.query(`DELETE FROM utilisateur WHERE id_utilisateur = ${req.params.id}`, (error, sqlResponse) => {
+        connexionSQL.query(`UPDATE utilisateur SET ? WHERE id_utilisateur='${req.body.id_utilisateur}'`, req.body, (error, sqlResponse) => {
             if (error) 
-            {
                 console.log("Error: ", error);
-            } 
             else 
             {
                 res.status(201)
-                .send(`L'utilisateur avec l'id ${req.params.id} a été supprimé.`)
+                .send(JSON.parse('{"result" : "Utilisateur modifié."}'))
                 .end();
             }
         });

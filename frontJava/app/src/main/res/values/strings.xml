@@ -27,6 +27,7 @@
     <string name="client">Client</string>
     <string name="association">Association</string>
     <string name="vendeur">Vendeur</string>
+    <string name="userAltered">Vos informations ont étés modifiées</string>
     <string name="createClientAccount">Création d\'un compte client :</string>
     <string name="createAssocAccount">Création d\'un compte d\'association :</string>
     <string name="createVendeurAccount">Création d\'un compte vendeur :</string>
@@ -40,4 +41,15 @@
     <string name="incorrectSiretNumber">Le numéro de SIRET n\'existe pas dans la base de données nationale.</string>
     <string name="accountsGes">Gestion des comptes</string>
     <string name="accountGes">Gestion de votre compte</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_user">Compte</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_disconnect">Quitter</string>
+    <string name="createStructure">Ajouter/Modifier une structure</string>
+    <string-array name="array_role">
+        <item>Client</item>
+        <item>Association</item>
+        <item>Vendeur</item>
+    </string-array>
 </resources>

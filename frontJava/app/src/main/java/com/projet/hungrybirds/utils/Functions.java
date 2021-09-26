@@ -81,7 +81,6 @@ public class Functions {
     public boolean verification(Context context)
     {
         Calendar timeNow = Calendar.getInstance();
-        System.out.println(context);
         SharedPreferences sharedPreferences = context.getSharedPreferences("file_pref", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
