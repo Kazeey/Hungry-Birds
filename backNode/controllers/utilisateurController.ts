@@ -83,15 +83,30 @@ class UtilisateurController {
     };
 
     delete = (req, res, next) => {
-        connexionSQL.query(``, (error, sqlResponse) => {
+        connexionSQL.query(`UPDATE utilisateur SET statut=0 WHERE (id_utilisateur = ${req.params.id})`, (error, sqlResponse) => {
             if (error) 
             {
                 console.log("Error: ", error);
             } 
             else 
             {
-                res.status(201)
-                .send(`L'utilisateur avec l'id ${req.params.id} a été supprimé.`)
+                res.status(200)
+                .send()
+                .end();
+            }
+        });
+    };
+
+    activer = (req, res, next) => {
+        connexionSQL.query(`UPDATE utilisateur SET statut=1 WHERE (id_utilisateur = ${req.params.id})`, (error, sqlResponse) => {
+            if (error) 
+            {
+                console.log("Error: ", error);
+            } 
+            else 
+            {
+                res.status(200)
+                .send()
                 .end();
             }
         });

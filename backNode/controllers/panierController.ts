@@ -63,7 +63,7 @@ class PanierController {
     };
 
     delete = (req, res, next) => {
-        connexionSQL.query(``, (error, sqlResponse) => {
+        connexionSQL.query(`DELETE FROM panier WHERE id_structure = ${req.params.id}`, (error, sqlResponse) => {
             if (error) 
             {
                 console.log("Error: ", error);

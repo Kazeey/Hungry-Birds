@@ -1,0 +1,26 @@
+<ion-content>
+  <ion-list padding *ngFor="let u of utilisateurs" scroll="true">
+    <ion-item>
+      <ion-card style="width: 100%;">
+        <ion-card-header>
+          <ion-card-subtitle *ngIf="u.statut===0">(Utilisateur inactif)</ion-card-subtitle>
+          <ion-card-title>
+            {{u.nom}} {{u.prenom}} 
+          </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p>Mail : {{u.mail}}</p>
+          <p>Téléphone : 0{{u.telephone}}</p>
+          <p>Adresse : {{u.adresse}}</p>
+          <p>Ville : {{u.ville}}</p>
+
+          <ion-button color="primary" (click)="presentModal(u)">Modifier</ion-button>
+          <ion-button color="danger" (click)="delete(u)" *ngIf="u.statut===1">Supprimer</ion-button>
+          <ion-button color="success" (click)="activate(u)" *ngIf="u.statut===0">Activer</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-content>
+  <ion-list padding *ngFor="let s of structures">
+    <ion-item *ngIf="s.utilisateur">
+      <ion-card style="width: 100%;">
+        <ion-card-header>
+          <ion-card-subtitle *ngIf="s.utilisateur[0].statut===0">(Structure inactive)</ion-card-subtitle>
+          <ion-card-title>
+            {{s.description}}
+          </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p>Propriétaire : {{s.utilisateur[0].prenom}} {{s.utilisateur[0].nom}}</p>
+          <p>Mail : {{s.utilisateur[0].mail}}</p>
+          <p>Telephone : 0{{s.utilisateur[0].telephone}}</p>
+          <p>Adresse : {{s.utilisateur[0].adresse}}</p>
+          <p>Ville : {{s.utilisateur[0].ville}}</p>
+          <ion-button color="primary" (click)="update()">Modifier</ion-button>
+          <ion-button color="danger" (click)="delete(s)" *ngIf="s.utilisateur[0].statut===1">Supprimer</ion-button>
+          <ion-button color="success" (click)="activate(s)" *ngIf="s.utilisateur[0].statut===0">Activer</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

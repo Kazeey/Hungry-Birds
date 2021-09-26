@@ -11,5 +11,6 @@ export const setUtilisateurRouting = (app) => {
     app.get(`/${endpoint}/:id`, utilisateurController.findById);
     app.post(`/${endpoint}`, jsonParser, utilisateurController.create);
     app.patch(`/${endpoint}/:id`, jsonParser, utilisateurController.update);
+    app.delete(`/${endpoint}/activate/:id`, utilisateurController.activer);
     app.delete(`/${endpoint}/:id`, utilisateurController.delete);
 }

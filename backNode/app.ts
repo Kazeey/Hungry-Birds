@@ -6,9 +6,11 @@ import { setpanierRouting } from './routes/panierRoutes';
 import { setfavoriRouting } from './routes/favoriRoutes';
 import { setcommandeRouting } from './routes/commandeRoutes';
 import { setLoginRouting } from './routes/loginRoutes';
+import cors from 'cors';
 
 const app = express();
 const port = 3001;
+app.use(cors())
 
 //Connexion BDD MySQL
 connexionSQL.connect(error => {

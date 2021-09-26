@@ -16,10 +16,10 @@ public class AdminActivity extends AppCompatActivity {
 
         WebView myWebView = (WebView) findViewById(R.id.admin);
         if(myWebView.getParent() != null) {
-            ((ViewGroup)myWebView.getParent()).removeView(myWebView); // <- fix
+            ((ViewGroup)myWebView.getParent()).removeView(myWebView);
         }
         myWebView.setWebViewClient(new WebViewClient());
         setContentView(myWebView);
-        myWebView.loadUrl("http://www.google.com");
+        myWebView.loadUrl("http://localhost:8100/");
     }
 }
