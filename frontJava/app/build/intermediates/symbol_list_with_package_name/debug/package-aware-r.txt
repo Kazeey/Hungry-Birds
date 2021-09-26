@@ -1895,6 +1895,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id admin
+id adminButton
 id alertTitle
 id aligned
 id all
@@ -2387,6 +2389,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_admin
 layout activity_forgot_password
 layout activity_gestion_user
 layout activity_main

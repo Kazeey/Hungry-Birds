@@ -249,6 +249,11 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    public void goToAdmin(View view) {
+        Intent intent = new Intent(mContext, AdminActivity.class);
+        startActivity(intent);
+    }
+
     public void goToGestionUser()
     {
         Intent intent = new Intent(mContext, GestionUserActivity.class);
