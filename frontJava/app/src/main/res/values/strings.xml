@@ -38,4 +38,6 @@
     <string name="accountBlocked">Votre compte est bloqué, veuillez contacter un administrateur.</string>
     <string name="siretAlreadyUsed">Le numéro de SIRET est déjà utilisé.</string>
     <string name="incorrectSiretNumber">Le numéro de SIRET n\'existe pas dans la base de données nationale.</string>
+    <string name="accountsGes">Gestion des comptes</string>
+    <string name="accountGes">Gestion de votre compte</string>
 </resources>

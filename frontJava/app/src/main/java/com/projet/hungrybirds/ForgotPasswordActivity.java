@@ -17,6 +17,7 @@ import com.projet.hungrybirds.actions.RegisterAction;
 import com.projet.hungrybirds.interfaces.VolleyCallback;
 import com.projet.hungrybirds.utils.Functions;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -94,6 +95,9 @@ public class ForgotPasswordActivity extends AppCompatActivity
                 }
 
                 @Override
+                public void onSuccessResponse(JSONArray result) throws JSONException {}
+
+                @Override
                 public void onSuccessResponseGet(String result) {}
             });
         }
@@ -103,8 +107,7 @@ public class ForgotPasswordActivity extends AppCompatActivity
     {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(mContext, MainActivity.class);
-            startActivity(intent);
+            cFunctionsClass.redirect(mContext);
         }
     };
 }

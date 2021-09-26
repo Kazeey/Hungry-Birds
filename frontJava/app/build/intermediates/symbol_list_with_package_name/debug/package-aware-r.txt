@@ -1767,6 +1767,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_item
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1780,6 +1781,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable gear
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2072,6 +2074,7 @@ id legacy
 id line1
 id line3
 id linear
+id linearLayoutGestionContainer
 id listMode
 id list_item
 id masked
@@ -2186,6 +2189,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollViewGestion
 id scrollViewRegisterPage
 id scrollViewRegisterPageStructure
 id scrollable
@@ -2255,7 +2259,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
-id testTextView
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2271,6 +2274,8 @@ id textTop
 id textViewErrorForgottenPassword
 id textViewForgotPassword
 id textViewForgottenPassword
+id textViewGestion
+id textViewGestion4
 id textViewRegisterError
 id textViewRegisterPage
 id text_input_end_icon
@@ -2388,6 +2393,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_forgot_password
+layout activity_gestion_accounts
 layout activity_gestion_user
 layout activity_main
 layout activity_register
@@ -2507,6 +2513,8 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string accountBlocked
 string accountCreated
+string accountGes
+string accountsGes
 string app_name
 string appbar_scrolling_view_behavior
 string association
