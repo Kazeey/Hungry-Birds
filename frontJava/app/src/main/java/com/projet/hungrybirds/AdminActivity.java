@@ -20,6 +20,6 @@ public class AdminActivity extends AppCompatActivity {
         }
         myWebView.setWebViewClient(new WebViewClient());
         setContentView(myWebView);
-        myWebView.loadUrl("http://localhost:8100/");
+        myWebView.loadUrl("http://10.0.2.2:4200/");
     }
 }
