@@ -13,10 +13,12 @@ import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.projet.hungrybirds.actions.CommonAction;
 import com.projet.hungrybirds.actions.RegisterAction;
 import com.projet.hungrybirds.interfaces.VolleyCallback;
 import com.projet.hungrybirds.utils.Functions;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity
 
     Functions cFunctionsClass = new Functions();
     RegisterAction cRegisterAction = new RegisterAction();
+    CommonAction cCommonAction = new CommonAction();
 
     Button mButtonReturn, mButtonRegister;
     ScrollView mStructureScrollView;
@@ -137,6 +140,12 @@ public class RegisterActivity extends AppCompatActivity
             zTownInput = mEditTown.getText().toString().trim();
             zPostalCodeInput = mEditPostalCode.getText().toString().trim();
 
+            boolean bIsMail = cFunctionsClass.checkMail(zMailInput);
+            if (!bIsMail)
+                cFunctionsClass.setMessage(mRegisterError, getString(R.string.incorrectMailFormat), 0);
+            else
+                cFunctionsClass.setMessage(mRegisterError, "", 0);
+
             if(bStructure)
             {
                 zStructureNameInput = mEditStructureName.getText().toString().trim();
@@ -144,13 +153,13 @@ public class RegisterActivity extends AppCompatActivity
 
                 mButtonRegister.setEnabled(!zNameInput.isEmpty() && !zFirstnameInput.isEmpty() && !zMailInput.isEmpty() && !zPasswordInput.isEmpty() &&
                         !zPhoneNumberInput.isEmpty() && !zAddressInput.isEmpty() && !zTownInput.isEmpty() &&
-                        !zPostalCodeInput.isEmpty() && !zStructureNameInput.isEmpty() && !zSiretNumberInput.isEmpty());
+                        !zPostalCodeInput.isEmpty() && !zStructureNameInput.isEmpty() && !zSiretNumberInput.isEmpty() && bIsMail);
             }
             else
             {
                 mButtonRegister.setEnabled(!zNameInput.isEmpty() && !zFirstnameInput.isEmpty() && !zMailInput.isEmpty() && !zPasswordInput.isEmpty() &&
                         !zPhoneNumberInput.isEmpty() && !zAddressInput.isEmpty() && !zTownInput.isEmpty() &&
-                        !zPostalCodeInput.isEmpty());
+                        !zPostalCodeInput.isEmpty() && bIsMail);
             }
         }
 
@@ -186,9 +195,12 @@ public class RegisterActivity extends AppCompatActivity
                 objectStructure.put("siret", cFunctionsClass.getTextFromInput(mEditSiretNumber));
                 objectBody.put("objectStructure", objectStructure);
 
-                cRegisterAction.checkSiret(mContext, objectStructure.get("siret").toString(), new VolleyCallback() {
+                cCommonAction.checkSiret(mContext, objectStructure.get("siret").toString(), new VolleyCallback() {
                     @Override
                     public void onSuccessResponse(JSONObject result) throws JSONException {}
+
+                    @Override
+                    public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                     @Override
                     public void onSuccessResponseGet(String result) {
@@ -209,6 +221,9 @@ public class RegisterActivity extends AppCompatActivity
                                         cFunctionsClass.redirectAfterTime(mContext, 3000);
                                     }
                                 }
+
+                                @Override
+                                public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                                 @Override
                                 public void onSuccessResponseGet(String result) {}
@@ -238,6 +253,9 @@ public class RegisterActivity extends AppCompatActivity
                     }
 
                     @Override
+                    public void onSuccessResponse(JSONArray result) throws JSONException {}
+
+                    @Override
                     public void onSuccessResponseGet(String result) {}
                 });
             }
@@ -248,8 +266,7 @@ public class RegisterActivity extends AppCompatActivity
     {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(mContext, MainActivity.class);
-            startActivity(intent);
+            cFunctionsClass.redirect(mContext);
         }
     };
 

@@ -81,7 +81,7 @@ public class LoginAction extends AppCompatActivity {
     public void changeStatusAccount(Context context, HashMap<String, String> object, VolleyCallback callback)
     {
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url = "http://10.0.2.2:3001/login/changeStatutAccount";
+        String url = "http://10.0.2.2:3001/login/changeStatusAccount";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(object), new Response.Listener<JSONObject>() {
             @Override

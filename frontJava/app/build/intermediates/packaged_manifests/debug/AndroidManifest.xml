@@ -22,11 +22,25 @@
         android:theme="@style/Theme.HungryBirds"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.projet.hungrybirds.AdminActivity"
-            android:exported="true" />
+            android:name="com.projet.hungrybirds.GestionStructureActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.projet.hungrybirds.ListStructuresActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.projet.hungrybirds.HomeActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.projet.hungrybirds.ListAccountsActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.projet.hungrybirds.ForgotPasswordActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.projet.hungrybirds.RegisterActivity"
             android:exported="true"

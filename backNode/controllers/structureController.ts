@@ -18,6 +18,33 @@ class StructureController {
         });
     };
 
+    findByUserId = (req, res, next) => {
+        connexionSQL.query(`SELECT * FROM structure WHERE id_utilisateur = ${req.params.id}`, (error, sqlResponse) => {
+            if (error) 
+            {
+                console.log("Error: ", error);
+            } 
+            else
+            {
+                let doc = [];
+                if(sqlResponse.length < 1)
+                {
+                    doc[0] = JSON.parse('{"response" : "Il n\'y a pas de structures pour cet utilisateur."}');
+                    res.status(200)
+                    .send(doc[0])
+                    .end();
+                }
+                else
+                {
+                    doc[0] = sqlResponse;
+                    res.status(200)
+                    .send(doc[0])
+                    .end();
+                }
+            }        
+        });
+    };
+
     findById = (req, res, next) => {
         connexionSQL.query(`SELECT * FROM structure WHERE id_structure = ${req.params.id}`, (error, sqlResponse) => {
             if (error) 
@@ -56,14 +83,23 @@ class StructureController {
                     {
                         if(sqlResponseSelect.length < 1)
                         {
-                            doc[0] = JSON.parse('{"response" : "L\id utilisateur ne peut être trouvé."}');
+                            doc[0] = JSON.parse('{"response" : "L\'id utilisateur ne peut être trouvé."}');
                             res.status(200)
                             .send(doc[0])
                             .end();
                         }
                         else
                         {
-                            connexionSQL.query(`INSERT INTO structure (id_utilisateur, description, siret) VALUES (${sqlResponseSelect[0].id_utilisateur}, '${req.body.description}', '${req.body.siret}')`, req.body, (error, sqlResponse) => {
+                            let query;
+                            if(req.body.heure_debut && req.body.heure_fin)
+                            {
+                                query = `INSERT INTO structure (id_utilisateur, description, heure_debut, heure_fin, siret) VALUES (${sqlResponseSelect[0].id_utilisateur}, '${req.body.description}', '${req.body.heure_debut}', '${req.body.heure_fin}', '${req.body.siret}')`;
+                            }
+                            else
+                            {
+                                query = `INSERT INTO structure (id_utilisateur, description, siret) VALUES (${sqlResponseSelect[0].id_utilisateur}, '${req.body.description}', '${req.body.siret}')`;
+                            }
+                            connexionSQL.query(query, req.body, (error, sqlResponse) => {
                             if (error) 
                             {
                                 console.log("Error: ", error);

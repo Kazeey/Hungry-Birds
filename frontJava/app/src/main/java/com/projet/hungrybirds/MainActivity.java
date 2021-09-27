@@ -17,6 +17,7 @@ import com.projet.hungrybirds.actions.LoginAction;
 import com.projet.hungrybirds.interfaces.VolleyCallback;
 import com.projet.hungrybirds.utils.Functions;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     // Récupération du context
     private Context mContext = this;
 
-    public String status;
+    public String zStatus;
     public int nbEssais;
 
     // Pour les durées seulement, Si 0 = 15min | Si 1 = 24h
@@ -69,8 +70,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonConnexion.setOnClickListener(checkLogin);
         mButtonRegister.setOnClickListener(goToRegister);
         mForgottenPassword.setOnClickListener(forgotPassword);
-        //mButtonNoRegister.setOnClickListener();
-
+        mButtonNoRegister.setOnClickListener(goToHome);
 
         // Instanciation du nombre d'essais pour une combinaison mail / password erronée
         nbEssais = 5;
@@ -151,6 +151,9 @@ public class MainActivity extends AppCompatActivity {
                                     }
 
                                     @Override
+                                    public void onSuccessResponse(JSONArray result) throws JSONException {}
+
+                                    @Override
                                     public void onSuccessResponseGet(String result) { }
                                 });
                             }
@@ -168,13 +171,16 @@ public class MainActivity extends AppCompatActivity {
                             switch (result.getInt("role"))
                             {
                                 case 0 :
-                                    status = "Client";
+                                    zStatus = "Client";
                                     break;
                                 case 1:
-                                    status = "Association";
+                                    zStatus = "Association";
                                     break;
                                 case 2:
-                                    status = "Vendeur";
+                                    zStatus = "Vendeur";
+                                    break;
+                                case 3:
+                                    zStatus = "Admin";
                                     break;
                             }
 
@@ -199,12 +205,17 @@ public class MainActivity extends AppCompatActivity {
                             editor.putLong(getString(R.string.timeDestructionSavedKey), timeDestruction);
                             editor.putBoolean(getString(R.string.connectedSavedKey), true);
                             editor.putInt(getString(R.string.userIdSavedKey), result.getInt("id_utilisateur"));
-                            editor.putString(getString(R.string.statusSavedKey), status);
+                            editor.putString(getString(R.string.statusSavedKey), zStatus);
+                            editor.putString("mail", result.getString("mail"));
                             editor.apply();
 
-                            goToGestionUser();
+                            Intent intent = new Intent(mContext, HomeActivity.class);
+                            startActivity(intent);
                         }
                     }
+
+                    @Override
+                    public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                     @Override
                     public void onSuccessResponseGet(String result) { }
@@ -256,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToGestionUser()
     {
-        Intent intent = new Intent(mContext, GestionUserActivity.class);
+        Intent intent = new Intent(mContext, ListAccountsActivity.class);
         startActivity(intent);
     }
 
@@ -268,16 +279,13 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    //TODO : Décommenter la function
-    /*
-    private View.OnClickListener goToGestionUser = new View.OnClickListener()
-    {
+    private View.OnClickListener goToHome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(mContext, GestionUserActivity.class);
+            Intent intent = new Intent(mContext, HomeActivity.class);
             startActivity(intent);
         }
     };
-     */
+
 
 }
