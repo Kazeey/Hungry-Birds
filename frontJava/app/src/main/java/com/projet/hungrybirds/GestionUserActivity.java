@@ -1,6 +1,5 @@
 package com.projet.hungrybirds;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -9,16 +8,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.google.android.material.navigation.NavigationBarView;
 import com.projet.hungrybirds.actions.GestionAction;
 import com.projet.hungrybirds.interfaces.VolleyCallback;
 import com.projet.hungrybirds.utils.Functions;
@@ -75,15 +71,6 @@ public class GestionUserActivity extends AppCompatActivity {
         mButtonReturn.setOnClickListener(mReturn);
 
         mGestionError = (TextView) findViewById(R.id.textViewGestionError);
-
-        mCreateStructure = (TextView) findViewById(R.id.textViewGestionCreateStructure);
-        mCreateStructure.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, GestionStructureActivity.class);
-                startActivity(intent);
-            }
-        });
 
         mEditName = (EditText) findViewById(R.id.editTextGestionNom);
         mEditFirstname = (EditText) findViewById(R.id.editTextGestionPrenom);
@@ -250,7 +237,7 @@ public class GestionUserActivity extends AppCompatActivity {
             Intent intent;
 
             if(zStatus == "Admin")
-                intent = new Intent(mContext, GestionAccountsActivity.class);
+                intent = new Intent(mContext, ListAccountsActivity.class);
             else
                 intent = new Intent(mContext, HomeActivity.class);
 

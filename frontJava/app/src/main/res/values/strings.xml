@@ -14,6 +14,7 @@
     <string name="placeholderPostalCode">Code Postal</string>
     <string name="placeholderStructureName">Nom de la structure</string>
     <string name="placeholderSiret">N° Siret</string>
+    <string name="placeholderDescription">Nom de la structure</string>
     <string name="buttonConnexion">Se connecter</string>
     <string name="buttonRegister">S\'inscrire</string>
     <string name="buttonNoRegister">Continuer sans se connecter</string>
@@ -41,11 +42,15 @@
     <string name="incorrectSiretNumber">Le numéro de SIRET n\'existe pas dans la base de données nationale.</string>
     <string name="accountsGes">Gestion des comptes</string>
     <string name="accountGes">Gestion de votre compte</string>
+    <string name="accountsStruct">Gestion des structures</string>
+    <string name="structure">Struc.</string>
+    <string name="accountStruct">Gestion de votre structure</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Accueil</string>
     <string name="title_user">Compte</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_disconnect">Quitter</string>
+    <string name="addStructure">Créer une stucture</string>
     <string name="createStructure">Ajouter/Modifier une structure</string>
     <string-array name="array_role">
         <item>Client</item>

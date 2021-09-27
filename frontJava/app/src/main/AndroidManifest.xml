@@ -17,16 +17,24 @@
         tools:targetApi="n">
         <activity
             android:name=".GestionStructureActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ListStructuresActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".HomeActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".GestionAccountsActivity"
-            android:exported="true" />
+            android:name=".ListAccountsActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ForgotPasswordActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".RegisterActivity"
             android:exported="true"

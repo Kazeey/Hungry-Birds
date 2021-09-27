@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_gestion"
-        android:name="com.projet.hungrybirds.GestionAccountsActivity"
+        android:name="com.projet.hungrybirds.ListAccountsActivity"
         android:label="@string/title_user"
         tools:layout="@layout/activity_list_accounts" />
 

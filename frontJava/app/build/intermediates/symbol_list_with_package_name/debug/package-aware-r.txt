@@ -1962,6 +1962,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id buttonAddNewStructure
 id buttonConnexion
 id buttonDisconnectMenu
 id buttonGestionSend
@@ -1972,7 +1973,9 @@ id buttonRegister
 id buttonRegisterActivity
 id buttonReturn
 id buttonReturnForgottenPassword
+id buttonSend
 id buttonSendForgottenPassword
+id buttonStructure
 id buttonUserMenu
 id cache_measures
 id cancel_button
@@ -2048,6 +2051,7 @@ id editMailConnexion
 id editPasswordConnexion
 id editTestPostalCode
 id editTextAddress
+id editTextDescription
 id editTextEmailForgottenPassword
 id editTextFirstname
 id editTextGestionAdresse
@@ -2064,6 +2068,8 @@ id editTextPassword
 id editTextPhoneNumber
 id editTextSiret
 id editTextStructureName
+id editTextTimeBegin
+id editTextTimeEnd
 id editTextTown
 id edit_query
 id elastic
@@ -2248,6 +2254,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollView2
+id scrollView3
 id scrollViewGestion
 id scrollViewRegisterPage
 id scrollViewRegisterPageStructure
@@ -2332,11 +2339,11 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textViewErrorForgottenPassword
+id textViewErrorMessage
 id textViewForgotPassword
 id textViewForgottenPassword
 id textViewGestion
 id textViewGestion4
-id textViewGestionCreateStructure
 id textViewGestionError
 id textViewRegisterError
 id textViewRegisterPage
@@ -2460,6 +2467,7 @@ layout activity_gestion_structure
 layout activity_gestion_user
 layout activity_home
 layout activity_list_accounts
+layout activity_list_structures
 layout activity_main
 layout activity_register
 layout custom_dialog
@@ -2582,7 +2590,10 @@ string abc_toolbar_collapse_description
 string accountBlocked
 string accountCreated
 string accountGes
+string accountStruct
 string accountsGes
+string accountsStruct
+string addStructure
 string app_name
 string appbar_scrolling_view_behavior
 string association
@@ -2682,6 +2693,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string placeholderAddress
+string placeholderDescription
 string placeholderFirstname
 string placeholderMail
 string placeholderName
@@ -2697,6 +2709,7 @@ string setMessage
 string siretAlreadyUsed
 string statusSavedKey
 string status_bar_notification_info_overflow
+string structure
 string timeDestructionSavedKey
 string title_activity_home
 string title_disconnect

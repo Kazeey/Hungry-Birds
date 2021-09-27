@@ -206,6 +206,7 @@ public class MainActivity extends AppCompatActivity {
                             editor.putBoolean(getString(R.string.connectedSavedKey), true);
                             editor.putInt(getString(R.string.userIdSavedKey), result.getInt("id_utilisateur"));
                             editor.putString(getString(R.string.statusSavedKey), zStatus);
+                            editor.putString("mail", result.getString("mail"));
                             editor.apply();
 
                             Intent intent = new Intent(mContext, HomeActivity.class);
@@ -261,7 +262,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToGestionUser()
     {
-        Intent intent = new Intent(mContext, GestionAccountsActivity.class);
+        Intent intent = new Intent(mContext, ListAccountsActivity.class);
         startActivity(intent);
     }
 

@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.projet.hungrybirds.actions.CommonAction;
 import com.projet.hungrybirds.actions.RegisterAction;
 import com.projet.hungrybirds.interfaces.VolleyCallback;
 import com.projet.hungrybirds.utils.Functions;
@@ -31,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity
 
     Functions cFunctionsClass = new Functions();
     RegisterAction cRegisterAction = new RegisterAction();
+    CommonAction cCommonAction = new CommonAction();
 
     Button mButtonReturn, mButtonRegister;
     ScrollView mStructureScrollView;
@@ -193,7 +195,7 @@ public class RegisterActivity extends AppCompatActivity
                 objectStructure.put("siret", cFunctionsClass.getTextFromInput(mEditSiretNumber));
                 objectBody.put("objectStructure", objectStructure);
 
-                cRegisterAction.checkSiret(mContext, objectStructure.get("siret").toString(), new VolleyCallback() {
+                cCommonAction.checkSiret(mContext, objectStructure.get("siret").toString(), new VolleyCallback() {
                     @Override
                     public void onSuccessResponse(JSONObject result) throws JSONException {}
 

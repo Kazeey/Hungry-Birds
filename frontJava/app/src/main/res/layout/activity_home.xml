@@ -7,22 +7,20 @@
     tools:context=".HomeActivity">
 
     <LinearLayout
-        android:layout_width="413dp"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
+        android:layout_width="372dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/buttonHomeMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:width="30dp"
+            android:width="400dp"
             android:text="@string/title_home" />
 
         <Button
@@ -30,15 +28,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:width="60dp"
+            android:width="400dp"
             android:text="@string/title_user" />
+
+        <Button
+            android:id="@+id/buttonStructure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:width="400dp"
+            android:text="@string/structure" />
 
         <Button
             android:id="@+id/buttonDisconnectMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:width="60dp"
+            android:width="400dp"
             android:text="@string/title_disconnect" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

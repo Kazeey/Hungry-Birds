@@ -12,6 +12,10 @@
         "source": "B:\\Projets\\Hungry-Birds\\frontJava\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "B:\\Projets\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_list_structures.xml.flat",
+        "source": "B:\\Projets\\Hungry-Birds\\frontJava\\app\\src\\main\\res\\layout\\activity_list_structures.xml"
+    },
+    {
         "merged": "B:\\Projets\\Hungry-Birds\\frontJava\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_dashboard_black_24dp.xml.flat",
         "source": "B:\\Projets\\Hungry-Birds\\frontJava\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
     },

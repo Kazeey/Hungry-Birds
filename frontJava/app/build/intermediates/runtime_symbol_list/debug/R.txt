@@ -1961,6 +1961,7 @@ int id bounce 0x7f08005e
 int id bounceBoth 0x7f08005f
 int id bounceEnd 0x7f080060
 int id bounceStart 0x7f080061
+int id buttonAddNewStructure 0x7f08021a
 int id buttonConnexion 0x7f080062
 int id buttonDisconnectMenu 0x7f080201
 int id buttonGestionSend 0x7f080204
@@ -1971,7 +1972,9 @@ int id buttonRegister 0x7f080065
 int id buttonRegisterActivity 0x7f080066
 int id buttonReturn 0x7f080067
 int id buttonReturnForgottenPassword 0x7f080068
+int id buttonSend 0x7f080214
 int id buttonSendForgottenPassword 0x7f080069
+int id buttonStructure 0x7f080213
 int id buttonUserMenu 0x7f080203
 int id cache_measures 0x7f08006a
 int id cancel_button 0x7f08006b
@@ -2047,6 +2050,7 @@ int id editMailConnexion 0x7f0800b0
 int id editPasswordConnexion 0x7f0800b1
 int id editTestPostalCode 0x7f0800b2
 int id editTextAddress 0x7f0800b3
+int id editTextDescription 0x7f080215
 int id editTextEmailForgottenPassword 0x7f0800b4
 int id editTextFirstname 0x7f0800b5
 int id editTextGestionAdresse 0x7f080205
@@ -2063,6 +2067,8 @@ int id editTextPassword 0x7f0800b8
 int id editTextPhoneNumber 0x7f0800b9
 int id editTextSiret 0x7f0800ba
 int id editTextStructureName 0x7f0800bb
+int id editTextTimeBegin 0x7f080216
+int id editTextTimeEnd 0x7f080217
 int id editTextTown 0x7f0800bc
 int id edit_query 0x7f0800bd
 int id elastic 0x7f0800be
@@ -2247,6 +2253,7 @@ int id scrollIndicatorDown 0x7f080172
 int id scrollIndicatorUp 0x7f080173
 int id scrollView 0x7f080174
 int id scrollView2 0x7f080210
+int id scrollView3 0x7f080218
 int id scrollViewGestion 0x7f080175
 int id scrollViewRegisterPage 0x7f080176
 int id scrollViewRegisterPageStructure 0x7f080177
@@ -2331,11 +2338,11 @@ int id textSpacerNoTitle 0x7f0801c4
 int id textStart 0x7f0801c5
 int id textTop 0x7f0801c6
 int id textViewErrorForgottenPassword 0x7f0801c7
+int id textViewErrorMessage 0x7f080219
 int id textViewForgotPassword 0x7f0801c8
 int id textViewForgottenPassword 0x7f0801c9
 int id textViewGestion 0x7f0801ca
 int id textViewGestion4 0x7f0801cb
-int id textViewGestionCreateStructure 0x7f080211
 int id textViewGestionError 0x7f080212
 int id textViewRegisterError 0x7f0801cc
 int id textViewRegisterPage 0x7f0801cd
@@ -2459,6 +2466,7 @@ int layout activity_gestion_structure 0x7f0b0079
 int layout activity_gestion_user 0x7f0b001d
 int layout activity_home 0x7f0b001e
 int layout activity_list_accounts 0x7f0b001f
+int layout activity_list_structures 0x7f0b007a
 int layout activity_main 0x7f0b0020
 int layout activity_register 0x7f0b0021
 int layout custom_dialog 0x7f0b0022
@@ -2581,7 +2589,10 @@ int string abc_toolbar_collapse_description 0x7f10001a
 int string accountBlocked 0x7f10001b
 int string accountCreated 0x7f10001c
 int string accountGes 0x7f10001d
+int string accountStruct 0x7f10009a
 int string accountsGes 0x7f10001e
+int string accountsStruct 0x7f10009b
+int string addStructure 0x7f10009d
 int string app_name 0x7f10001f
 int string appbar_scrolling_view_behavior 0x7f100020
 int string association 0x7f100021
@@ -2681,6 +2692,7 @@ int string path_password_eye_mask_strike_through 0x7f10007d
 int string path_password_eye_mask_visible 0x7f10007e
 int string path_password_strike_through 0x7f10007f
 int string placeholderAddress 0x7f100080
+int string placeholderDescription 0x7f10009e
 int string placeholderFirstname 0x7f100081
 int string placeholderMail 0x7f100082
 int string placeholderName 0x7f100083
@@ -2696,6 +2708,7 @@ int string setMessage 0x7f10008c
 int string siretAlreadyUsed 0x7f10008d
 int string statusSavedKey 0x7f10008e
 int string status_bar_notification_info_overflow 0x7f10008f
+int string structure 0x7f10009c
 int string timeDestructionSavedKey 0x7f100090
 int string title_activity_home 0x7f100091
 int string title_disconnect 0x7f100092
