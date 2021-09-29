@@ -201,7 +201,7 @@ class StructureController {
                                                 console.log("Error : " + error);
                                             else
                                             {
-                                                connexionSQL.query(`INSERT INTO structure (id_utilisateur, description, siret) VALUES (${sqlReponseSelectUser[0].id_utilisateur}, '${objectStructure.description}', '${siret}')`, (error, sqlResponse) => {
+                                                connexionSQL.query(`INSERT INTO structure (id_utilisateur, description, siret) VALUES (${objectUser.id_utilisateur}, '${objectStructure.description}', '${siret}')`, (error, sqlResponse) => {
                                                     if (error)
                                                         console.log("Error : " + error);
                                                     else

@@ -203,7 +203,7 @@ public class RegisterActivity extends AppCompatActivity
                     public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                     @Override
-                    public void onSuccessResponseGet(String result) {
+                    public void onSuccessResponse(String result) {
                         if(!result.equals(""))
                         {
                             cFunctionsClass.setMessage(mRegisterError, "", 0);
@@ -226,7 +226,7 @@ public class RegisterActivity extends AppCompatActivity
                                 public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                                 @Override
-                                public void onSuccessResponseGet(String result) {}
+                                public void onSuccessResponse(String result) {}
                             });
                         }
                         else
@@ -256,7 +256,7 @@ public class RegisterActivity extends AppCompatActivity
                     public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                     @Override
-                    public void onSuccessResponseGet(String result) {}
+                    public void onSuccessResponse(String result) {}
                 });
             }
         }

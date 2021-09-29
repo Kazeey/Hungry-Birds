@@ -221,7 +221,7 @@ public class GestionUserActivity extends AppCompatActivity {
                     public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                     @Override
-                    public void onSuccessResponseGet(String result) {}
+                    public void onSuccessResponse(String result) {}
                 });
             }
             catch (JSONException e)

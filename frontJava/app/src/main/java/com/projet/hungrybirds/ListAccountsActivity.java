@@ -98,7 +98,7 @@ public class ListAccountsActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onSuccessResponseGet(String result) {
+            public void onSuccessResponse(String result) {
 
             }
         });

@@ -1,10 +1,28 @@
 com/projet/hungrybirds/BuildConfig.java
  com.projet.hungrybirds.BuildConfig
+com/projet/hungrybirds/databinding/ActivityRegisterBinding.java
+ com.projet.hungrybirds.databinding.ActivityRegisterBinding
+com/projet/hungrybirds/databinding/ActivityAdminBinding.java
+ com.projet.hungrybirds.databinding.ActivityAdminBinding
+com/projet/hungrybirds/AdminActivity.java
+ com.projet.hungrybirds.AdminActivity
+com/projet/hungrybirds/databinding/ActivityGestionStructureBinding.java
+ com.projet.hungrybirds.databinding.ActivityGestionStructureBinding
+com/projet/hungrybirds/databinding/ActivityListStructuresBinding.java
+ com.projet.hungrybirds.databinding.ActivityListStructuresBinding
+com/projet/hungrybirds/databinding/ActivityHomeBinding.java
+ com.projet.hungrybirds.databinding.ActivityHomeBinding
+com/projet/hungrybirds/databinding/ActivityForgotPasswordBinding.java
+ com.projet.hungrybirds.databinding.ActivityForgotPasswordBinding
+com/projet/hungrybirds/databinding/ActivityMainBinding.java
+ com.projet.hungrybirds.databinding.ActivityMainBinding
+com/projet/hungrybirds/databinding/ActivityListAccountsBinding.java
+ com.projet.hungrybirds.databinding.ActivityListAccountsBinding
+com/projet/hungrybirds/databinding/ActivityGestionUserBinding.java
+ com.projet.hungrybirds.databinding.ActivityGestionUserBinding
 com/projet/hungrybirds/utils/Functions.java
  com.projet.hungrybirds.utils.Functions
  com.projet.hungrybirds.utils.Functions$1
-com/projet/hungrybirds/databinding/ActivityAdminBinding.java
- com.projet.hungrybirds.databinding.ActivityAdminBinding
 com/projet/hungrybirds/GestionUserActivity.java
  com.projet.hungrybirds.GestionUserActivity
  com.projet.hungrybirds.GestionUserActivity$1
@@ -20,8 +38,6 @@ com/projet/hungrybirds/actions/RegisterAction.java
  com.projet.hungrybirds.actions.RegisterAction$4
  com.projet.hungrybirds.actions.RegisterAction$5
  com.projet.hungrybirds.actions.RegisterAction$6
-com/projet/hungrybirds/databinding/ActivityListStructuresBinding.java
- com.projet.hungrybirds.databinding.ActivityListStructuresBinding
 com/projet/hungrybirds/RegisterActivity.java
  com.projet.hungrybirds.RegisterActivity
  com.projet.hungrybirds.RegisterActivity$1
@@ -45,8 +61,6 @@ com/projet/hungrybirds/actions/LoginAction.java
  com.projet.hungrybirds.actions.LoginAction$9
 com/projet/hungrybirds/interfaces/VolleyCallback.java
  com.projet.hungrybirds.interfaces.VolleyCallback
-com/projet/hungrybirds/databinding/ActivityListAccountsBinding.java
- com.projet.hungrybirds.databinding.ActivityListAccountsBinding
 com/projet/hungrybirds/actions/GestionAction.java
  com.projet.hungrybirds.actions.GestionAction
  com.projet.hungrybirds.actions.GestionAction$1
@@ -61,8 +75,6 @@ com/projet/hungrybirds/actions/GestionAction.java
  com.projet.hungrybirds.actions.GestionAction$7
  com.projet.hungrybirds.actions.GestionAction$8
  com.projet.hungrybirds.actions.GestionAction$9
-com/projet/hungrybirds/databinding/ActivityHomeBinding.java
- com.projet.hungrybirds.databinding.ActivityHomeBinding
 com/projet/hungrybirds/ListStructuresActivity.java
  com.projet.hungrybirds.ListStructuresActivity
  com.projet.hungrybirds.ListStructuresActivity$1
@@ -75,8 +87,6 @@ com/projet/hungrybirds/ListAccountsActivity.java
  com.projet.hungrybirds.ListAccountsActivity$1
  com.projet.hungrybirds.ListAccountsActivity$2
  com.projet.hungrybirds.ListAccountsActivity$3
-com/projet/hungrybirds/databinding/ActivityGestionUserBinding.java
- com.projet.hungrybirds.databinding.ActivityGestionUserBinding
 com/projet/hungrybirds/GestionStructureActivity.java
  com.projet.hungrybirds.GestionStructureActivity
  com.projet.hungrybirds.GestionStructureActivity$1
@@ -84,33 +94,12 @@ com/projet/hungrybirds/GestionStructureActivity.java
  com.projet.hungrybirds.GestionStructureActivity$2$1
  com.projet.hungrybirds.GestionStructureActivity$3
  com.projet.hungrybirds.GestionStructureActivity$3$1
-com/projet/hungrybirds/databinding/ActivityRegisterBinding.java
- com.projet.hungrybirds.databinding.ActivityRegisterBinding
-com/projet/hungrybirds/databinding/ActivityGestionStructureBinding.java
- com.projet.hungrybirds.databinding.ActivityGestionStructureBinding
 com/projet/hungrybirds/ForgotPasswordActivity.java
  com.projet.hungrybirds.ForgotPasswordActivity
  com.projet.hungrybirds.ForgotPasswordActivity$1
  com.projet.hungrybirds.ForgotPasswordActivity$2
  com.projet.hungrybirds.ForgotPasswordActivity$2$1
  com.projet.hungrybirds.ForgotPasswordActivity$3
-com/projet/hungrybirds/databinding/ActivityMainBinding.java
- com.projet.hungrybirds.databinding.ActivityMainBinding
-com/projet/hungrybirds/databinding/ActivityForgotPasswordBinding.java
- com.projet.hungrybirds.databinding.ActivityForgotPasswordBinding
-com/projet/hungrybirds/actions/CommonAction.java
- com.projet.hungrybirds.actions.CommonAction
- com.projet.hungrybirds.actions.CommonAction$1
- com.projet.hungrybirds.actions.CommonAction$2
- com.projet.hungrybirds.actions.CommonAction$3
-com/projet/hungrybirds/HomeActivity.java
- com.projet.hungrybirds.HomeActivity
- com.projet.hungrybirds.HomeActivity$1
- com.projet.hungrybirds.HomeActivity$2
- com.projet.hungrybirds.HomeActivity$3
- com.projet.hungrybirds.HomeActivity$4
-com/projet/hungrybirds/AdminActivity.java
- com.projet.hungrybirds.AdminActivity
 com/projet/hungrybirds/MainActivity.java
  com.projet.hungrybirds.MainActivity
  com.projet.hungrybirds.MainActivity$1
@@ -122,3 +111,14 @@ com/projet/hungrybirds/MainActivity.java
  com.projet.hungrybirds.MainActivity$2$3
  com.projet.hungrybirds.MainActivity$3
  com.projet.hungrybirds.MainActivity$4
+com/projet/hungrybirds/HomeActivity.java
+ com.projet.hungrybirds.HomeActivity
+ com.projet.hungrybirds.HomeActivity$1
+ com.projet.hungrybirds.HomeActivity$2
+ com.projet.hungrybirds.HomeActivity$3
+ com.projet.hungrybirds.HomeActivity$4
+com/projet/hungrybirds/actions/CommonAction.java
+ com.projet.hungrybirds.actions.CommonAction
+ com.projet.hungrybirds.actions.CommonAction$1
+ com.projet.hungrybirds.actions.CommonAction$2
+ com.projet.hungrybirds.actions.CommonAction$3

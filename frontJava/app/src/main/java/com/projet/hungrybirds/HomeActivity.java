@@ -29,6 +29,8 @@ public class HomeActivity extends AppCompatActivity {
         mButtonStruc = (Button) findViewById(R.id.buttonStructure);
         mButtonHome = (Button) findViewById(R.id.buttonHomeMenu);
 
+        boolean bVerification = cFunctions.verification(this);
+
         mButtonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +39,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        boolean bVerification = cFunctions.verification(this);
         if(!bVerification)
         {
             mButtonStruc.setVisibility(View.GONE);
@@ -53,7 +54,6 @@ public class HomeActivity extends AppCompatActivity {
                 }
             });
         }
-
         mButtonStruc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +61,6 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         mButtonDisconnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

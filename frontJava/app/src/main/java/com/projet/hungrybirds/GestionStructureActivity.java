@@ -133,7 +133,7 @@ public class GestionStructureActivity extends AppCompatActivity {
                 public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                 @Override
-                public void onSuccessResponseGet(String result) {
+                public void onSuccessResponse(String result) {
                     if(!result.equals(""))
                     {
                         cFunctions.setMessage(mErrorZone, "", 0);
@@ -178,7 +178,7 @@ public class GestionStructureActivity extends AppCompatActivity {
                 public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                 @Override
-                public void onSuccessResponseGet(String result) {}
+                public void onSuccessResponse(String result) {}
             });
         }
     };

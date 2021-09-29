@@ -15,12 +15,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommonAction {
-    /**
-     * This function check the Siret Number with the government API
-     *
-     * @param context   Contect from the targeted Activity
-     * @return          Return the response as JSONObject
-     */
     public void checkSiret(Context context, String Siret, VolleyCallback callback)
     {
         RequestQueue queue = Volley.newRequestQueue(context);
@@ -29,13 +23,13 @@ public class CommonAction {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                callback.onSuccessResponseGet(response);
+                callback.onSuccessResponse(response);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 if (error.networkResponse.statusCode != 200)
-                    callback.onSuccessResponseGet("");
+                    callback.onSuccessResponse("");
             }
         }) {
             public Map<String, String> getHeaders() throws AuthFailureError

@@ -124,15 +124,12 @@ public class MainActivity extends AppCompatActivity {
                         // Si la réponse est un message d'erreur alors le JSON contient un champ "response", ce qui veut dire que la combinaison est incorrecte
                         if(result.has("response"))
                         {
-                            // Si l'utilisateur a toujours ses 5 essais
                             if(nbEssais > 1)
                             {
-                                // On décrément au fur et à mesure de ses erreurs, et on actualise le message
                                 nbEssais = nbEssais - 1;
                                 cFunctionsClass.setMessage(mSetMessage, getString(R.string.numberTries), nbEssais);
                             }
-                            else // Sinon l'utilisateur n'a plus d'essais
-                            {
+                            else {
                                 String status = "0";
 
                                 // Creation of the JSON body
@@ -144,8 +141,6 @@ public class MainActivity extends AppCompatActivity {
                                 cLoginAction.changeStatusAccount(mContext, object, new VolleyCallback() {
                                     @Override
                                     public void onSuccessResponse(JSONObject result) throws JSONException {
-                                        System.out.println(result);
-                                        // L'on appelle l'API pour bloquer son compte et on le lui signale
                                         cFunctionsClass.setMessage(mSetMessage, getString(R.string.accountBlocked), 0);
                                         return;
                                     }
@@ -154,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                                     public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                                     @Override
-                                    public void onSuccessResponseGet(String result) { }
+                                    public void onSuccessResponse(String result) { }
                                 });
                             }
                         }
@@ -218,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                     @Override
-                    public void onSuccessResponseGet(String result) { }
+                    public void onSuccessResponse(String result) { }
                 });
             }
         }

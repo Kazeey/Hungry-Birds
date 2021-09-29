@@ -71,12 +71,14 @@ public class ListStructuresActivity extends AppCompatActivity {
             @Override
             public void onSuccessResponse(JSONArray result) throws JSONException {
                 JSONObject obj;
+                setContentView(R.layout.activity_list_structures);
+                linearLayoutContainer = (LinearLayout) findViewById(R.id.linearLayoutGestionContainer);
                 for(int i = 0; i < result.length(); i++)
                 {
                     obj = result.getJSONObject(i);
-                    setContentView(R.layout.activity_list_structures);
-                    linearLayoutContainer = (LinearLayout) findViewById(R.id.linearLayoutGestionContainer);
+
                     generateElements(obj.getString("description"), obj.getString("siret"), obj);
+
                     mButtonAddStructure = (Button) findViewById(R.id.buttonAddNewStructure);
                     mButtonAddStructure.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -98,7 +100,7 @@ public class ListStructuresActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onSuccessResponseGet(String result) {}
+            public void onSuccessResponse(String result) {}
         });
     }
 

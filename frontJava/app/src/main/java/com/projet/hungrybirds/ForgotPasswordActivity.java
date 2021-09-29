@@ -27,7 +27,7 @@ public class ForgotPasswordActivity extends AppCompatActivity
 {
 
     // Récupération du context
-    private Context mContext = this;
+    private final Context mContext = this;
 
     Functions cFunctionsClass = new Functions();
     LoginAction cLoginAction = new LoginAction();
@@ -43,10 +43,10 @@ public class ForgotPasswordActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-        mButtonReturn = (Button) findViewById(R.id.buttonReturnForgottenPassword);
-        mButtonSend = (Button) findViewById(R.id.buttonSendForgottenPassword);
-        mErrorMessage = (TextView) findViewById(R.id.textViewErrorForgottenPassword);
-        mEditMail = (EditText) findViewById(R.id.editTextEmailForgottenPassword);
+        mButtonReturn = findViewById(R.id.buttonReturnForgottenPassword);
+        mButtonSend = findViewById(R.id.buttonSendForgottenPassword);
+        mErrorMessage = findViewById(R.id.textViewErrorForgottenPassword);
+        mEditMail = findViewById(R.id.editTextEmailForgottenPassword);
 
         mEditMail.addTextChangedListener(forgotPasswordWatcher);
 
@@ -54,7 +54,7 @@ public class ForgotPasswordActivity extends AppCompatActivity
         mButtonReturn.setOnClickListener(returnToLogin);
     }
 
-    private TextWatcher forgotPasswordWatcher = new TextWatcher() {
+    private final TextWatcher forgotPasswordWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
 
@@ -77,7 +77,7 @@ public class ForgotPasswordActivity extends AppCompatActivity
         public void afterTextChanged(Editable editable) {}
     };
 
-    private View.OnClickListener sendMail = new View.OnClickListener() {
+    private final View.OnClickListener sendMail = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             cFunctionsClass.setMessage(mErrorMessage, "", 0);
@@ -98,12 +98,12 @@ public class ForgotPasswordActivity extends AppCompatActivity
                 public void onSuccessResponse(JSONArray result) throws JSONException {}
 
                 @Override
-                public void onSuccessResponseGet(String result) {}
+                public void onSuccessResponse(String result) {}
             });
         }
     };
 
-    private View.OnClickListener returnToLogin = new View.OnClickListener()
+    private final View.OnClickListener returnToLogin = new View.OnClickListener()
     {
         @Override
         public void onClick(View view) {
